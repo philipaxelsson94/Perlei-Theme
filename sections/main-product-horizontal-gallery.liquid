@@ -101,7 +101,6 @@
   </div>
 
   <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color px-2 lg:px-0 pb-2 lg:pb-8">
-
     <div class="lg:col-start-10 lg:col-end-13 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding">
       <div class="lg:sticky lg:top-sticky-header py-theme product-block-area">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -478,6 +477,19 @@
       </div>
     </div>
     <div class="product-description {% if no_social_blocks %}lg:col-start-1{% else %}lg:col-start-4{% endif %} lg:col-end-10 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding py-theme product-block-area">
+      <div class="container">
+        <div class="row">
+          <div>
+            <img src="{{ 'leaf.png' | asset_url }}" alt="The Soap Store" class="css--class1 css--class2" id="logo">
+          </div>
+          <div>
+            <img src="{{ 'diet.png' | asset_url }}" alt="The Soap Store" class="css--class1 css--class2" id="logo">
+          </div>
+          <div>
+            <img src="{{ 'fast.png' | asset_url }}" alt="The Soap Store" class="css--class1 css--class2" id="logo">
+          </div>
+        </div>
+      </div>
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
       {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' -%}

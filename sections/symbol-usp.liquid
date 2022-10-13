@@ -1,0 +1,49 @@
+{% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+    {% if block.type == 'icon_block' %}
+    <div class="fea">
+    <img src="{{ block.settings.image_id | img_url: 'master' }}" alt="{{ block.settings.image_id.alt }}">
+    {{ block.settings.text }}
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    
+    <style>
+    .fea {
+        display: inline-block;
+        width: calc((100% - 10px) / 3);
+        max-width: 190px;
+        margin: 40px 0 0;
+        vertical-align: top;
+    }
+    </style>
+    {% schema %}
+    {
+      "name": "Image and Text",
+      "settings": [],
+      "blocks": [
+        {
+          "type": "icon_block",
+          "name": "Icon Block",
+          "settings": [
+            {
+              "type" : "image_picker",
+              "id" : "image_id",
+              "label" : "Select Image"
+            },
+            {
+              "type" : "richtext",
+              "id" : "text",
+              "label" : "Enter Decsription"
+            }
+            ]
+        }
+        ],	
+      "presets" : [
+        {
+        "name" : "Icon Section" 
+        }
+      ] 
+    }
+    {% endschema %}
