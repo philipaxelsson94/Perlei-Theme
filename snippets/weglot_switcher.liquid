@@ -1,0 +1,40 @@
+<!--Start Weglot Script-->
+{%- assign full_url = canonical_url | split: '://www.' | last | split: '://' | last -%}
+<link rel="alternate" hreflang="en" href="{{ canonical_url }}">
+<link rel="alternate" hreflang="sv" href="https://sv.{{ full_url }}">
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+  Weglot.initialize({
+    api_key: 'wg_c6888e5e3345d34e8c05b027346310921',
+    switchers: [
+      {
+        button_style: {
+          full_name: false,
+          with_name: true,
+          is_dropdown: true,
+          with_flags: true,
+          flag_type: "circle",
+          invert_flags: false
+        },
+        location: {
+          target: ".weglot-switcher--d",
+          sibling: null
+        }
+      },
+      {
+        button_style: {
+          with_name: false,
+          is_dropdown: true,
+          with_flags: true,
+          flag_type: "circle",
+          invert_flags: false
+        },
+        location: {
+          target: ".weglot-switcher--m",
+          sibling: null
+        }
+      }
+    ]
+  });
+</script>
+<!--End Weglot Script-->

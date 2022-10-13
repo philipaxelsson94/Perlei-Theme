@@ -1,0 +1,300 @@
+<!doctype html>
+<html class="no-js supports-no-cookies" lang="{{ request.locale.iso_code }}">
+<head>{% render 'pagefly-head' %}
+  {% render 'elevar-head' %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_accent }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+
+  {%- liquid
+    assign body_font = settings.font_body
+    assign heading_font = settings.font_heading
+    assign body_font_bolder = body_font | font_modify: 'weight', 'bolder'
+    assign body_font_bold = body_font | font_modify: 'weight', 'bold'
+    assign body_font_italic = body_font | font_modify: 'style', 'italic'
+    assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+  -%}
+
+  {% comment %}theme-check-disable UndefinedObject{% endcomment %}
+  {{ preload_tags }}
+  {% comment %}theme-check-enable UndefinedObject{% endcomment %}
+
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+
+  {%- capture seo_title -%}
+    {{ page_title }}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- if template == 'password' -%}
+      {{ shop.name }}
+    {%- else -%}
+      {%- unless page_title contains shop.name -%}
+        &ndash; {{ shop.name }}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endcapture -%}
+  <title>{{ seo_title | strip }}</title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+
+  <!-- Start IE11 compatibility -->
+  <script>
+    if (!!window.MSInputMethodContext && !!document.documentMode) {
+      // CSSVar Polyfill
+      document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>');
+
+      document.documentElement.className = document.documentElement.className.replace('js', 'no-js');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var elsToLazyload = document.querySelectorAll('.lazyload');
+        for (var i = 0; i < elsToLazyload.length; i++) {
+          var elToLazyLoad = elsToLazyload[i];
+          elToLazyLoad.removeAttribute('src');
+          var src = elToLazyLoad.getAttribute('data-src').replace('_{width}x.', '_600x.');
+          elToLazyLoad.setAttribute('src', src);
+          elToLazyLoad.classList.remove('lazyload');
+          elToLazyLoad.classList.add('lazyloaded');
+        }
+      });
+    }
+  </script>
+  <!-- End IE11 compatibility -->
+  {% render 'css-variables' %}
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+      }
+    }
+  </style>
+  {% render 'critical-css' %}
+  {% render 'social-meta-tags' %}
+  {% render 'style-tags', layout: 'theme' %}
+  
+  {% if template.name == 'index' %}
+  	<link rel="stylesheet" href="{{ 'homepage.css' | asset_url }}">
+  {% endif %}
+
+  {% if template contains 'customers' %}
+    <script src="{{ "shopify_common.js" | shopify_asset_url }}" defer="defer"></script>
+  {% endif %}
+
+  <style>
+    {{ heading_font | font_face: font_display: 'swap' }}
+    {{ body_font | font_face: font_display: 'swap' }}
+    {{ body_font_bold | font_face: font_display: 'swap' }}
+    {{ body_font_bolder | font_face: font_display: 'swap' }}
+    {{ body_font_italic | font_face: font_display: 'swap' }}
+    {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+  </style>
+  
+
+  <!-- SparkLayer Sample CSS Code -->
+
+  <style type="text/css">
+
+  :root {
+    /* Update colours */
+    --spark-default-body-color: #555555; /* Main body colour*/
+    --spark-primary-color: #000000; /* Main title colour*/
+    --spark-secondary-color: #EE778A; /* Main highlight colour*/
+    --spark-link-color: #EE778A; /* Link colour*/
+
+    /* Typefaces */
+    --spark-font-default: "Swiss 721", serif; /* Body typeface*/
+    --spark-font-highlight: "Swiss 721", serif; /* Highlight typeface*/
+    --spark-header-font: owners-xwide, sans-serif; /* Header typeface*/
+    --spark-font-weight-default: 400; /* Default font weight*/
+    --spark-font-weight-medium: 400; /* Medium font weight*/
+    --spark-font-weight-heavy: 400; /* Bold font weight*/
+    --spark-header-font-weight: 400; /* Header font weight*/
+
+    /* General */
+    --spark-border-radius-default: 0; /* Default border radius*/
+    --spark-drawer-max-width: 700px; /* Width of overlay*/
+    --spark-drawer-max-width-wide: 1000px; /* Width of overlay in maximised view*/
+
+    /* Font sizes */
+    --spark-font-default-size: 14px; /* Default font size*/
+    --spark-font-default-size-small: 12px; /* Default font size - small screens*/
+    --spark-h1-fontsize: 24px; /* Header 1 font size*/
+    --spark-h2-fontsize: 22px; /* Header 2 font size*/
+    --spark-h3-fontsize: 20px; /* Header 3 font size*/
+    --spark-h4-fontsize: 16px; /* Header 4 font size*/
+    --spark-h5-fontsize: 15px; /* Header 5 font size*/
+    --spark-h6-fontsize: 14px; /* Header 6 font size*/
+    --spark-pricing-fontsize: 14px; /* Font size of pricing*/
+    --spark-pricing-font-weight: 400; /* Font weight of pricing*/
+    --spark-pricing-fontsize-small: 12px; /* Font size of pricing on mobile*/
+
+    --spark-product-code-fontsize: 14px; /* Font size of product code*/
+    --spark-product-code-font-weight: 600; /* Font weight of product code*/
+    --spark-product-code-fontsize-small: 12px; /* Font size of product code on mobile*/
+    --spark-product-stockstatus-align: flex-start; /* Aligment of stock status for single variants*/
+
+    /* Buttons */
+    --spark-button-font-family: "Swiss 721", sans-serif; /* Button typeface*/
+    --spark-button-color: #EE778A; /* Default sutton colour*/
+    --spark-button-color-highlight: #000000; /* Default button colour hover*/
+    --spark-button-large-color: #EE778A; /* Large button colour*/
+    --spark-button-large-color-highlight: #000000; /* Large button colour hover*/
+    --spark-border-radius-button: 200px; /* Button border radius*/
+    --spark-button-font-weight: 400; /* Button font weight*/
+    --spark-button-text-transform: none; /* Button text transform*/
+    --spark-button-text-letter-spacing: 0; /* Button letter spacing*/
+    --spark-button-padding: 1em 2.75em; /* Button padding*/
+
+    /* Tables */
+    --spark-table-border-color: #CCCCCC; /* Table border colour*/
+    --spark-table-header-background-color: #F1F1F1; /* Table header background*/
+    --spark-table-header-text-color: #222222; /* Table header font colour*/
+    --spark-table-header-font-weight: 400; /* Table header font weight*/
+
+    /* Product Card */
+    --spark-product-card-button-radius: 100px; /* Button radius*/
+    --spark-product-card-button-padding: 0.75em 1em; /* Button padding*/
+    --spark-product-card-pricing-font-size: 15px; /* Pricng font size*/
+    --spark-product-card-pricing-font-size-small: 14px; /* Pricng font size on mobile*/
+    --spark-product-card-select-min-height: 0; /* Set a min-height for select menu*/
+
+  }
+  </style>
+
+  <!-- End SparkLayer Sample CSS Code -->
+
+  {% render 'script-tags', layout: 'theme' %}
+
+  {{ content_for_header }}
+  
+  {%- if customer.metafields.sparklayer.authentication -%}
+  <!-- Start of SparkLayer core script-->
+  <script>
+    window.sparkOptions = {
+      siteId: "perleisweden",
+      platform: "shopify",
+      auth: {
+        user: {{ customer.email | json }},
+        token: {{ customer.metafields.sparklayer.authentication | json }},
+      },
+    };
+  </script>
+  <script async src="https://cdn.sparklayer.io/spark.0.7.60.js"></script>
+  <!-- End of SparkLayer core script-->
+  {%- endif -%}
+  
+{% render 'weglot_hreftags' %}
+{% render 'weglot_switcher' %}
+
+  <!-- Hotjar Tracking Code for https://perleisweden.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3148643,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  
+</head>
+
+<body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} {% if settings.buttons_show_arrow %}show-button-arrows{% endif %}">
+  {% render 'elevar-body-end' %}
+  <a class="in-page-link skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+  {%- liquid
+      section 'sidebar'
+      if settings.ajax_cart_method == 'drawer'
+        render 'cart-drawer'
+      endif
+      render 'availability-drawer'
+      section 'announcement-bar'
+  -%}
+  <div class="flex flex-col min-h-screen relative">
+    {% if template.name == 'index' %}
+      <div id="sticky-positioner"></div>
+    {% endif %}
+    
+    {% section 'header' %}
+    
+    <main role="main" id="MainContent" class="flex-grow">
+      {% if request.path contains '/policies/' %}
+		{% render 'policy' %}
+	  {% else %}
+		{{ content_for_layout }}
+	  {% endif %}
+    </main>
+    
+    {% section 'footer' %}
+    
+  </div>
+  {% section 'popup' %}
+
+  <div id="screenreader-announce" class="visually-hidden" aria-live="polite" role="status"></div>
+
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+  </ul>
+
+  <script>
+    window.theme = {
+      strings: {
+        loading: {{ 'general.search.loading' | t | json }},
+        itemCountOne: {{ 'cart.popup.cart_count.one' | t | json }},
+        itemCountOther: {{ 'cart.popup.cart_count.other' | t | json }},
+        addToCart: {{ 'products.product.add_to_cart' | t | json }},
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        regularPrice: {{ 'products.product.regular_price' | t | json }},
+        salePrice: {{ 'products.product.sale_price' | t | json }},
+        sale: {{ 'products.product.on_sale' | t | json }},
+        unitPrice: {{ 'products.product.unit_price_label' | t | json }},
+        unitPriceSeparator: {{ 'general.accessibility.unit_price_separator' | t | json }},
+        cartEmpty: {{ 'cart.general.empty' | t | json }},
+        cartCookies: {{ 'cart.general.cookies_required' | t | json }},
+        update: {{ 'cart.label.update' | t | json }},
+        quantity: {{ 'cart.label.quantity' | t | json }},
+        discountedTotal: {{ 'cart.label.discounted_total' | t | json }},
+        regularTotal: {{ 'cart.label.regular_total' | t | json }},
+        priceColumn: {{ 'cart.label.price_column' | t | json }},
+        addedToCart: {{ 'cart.popup.added_to_cart' | t | append: '!' | json }},
+        cartAddError: {{ 'cart.general.cart_add_error' | t | json }},
+        cartError: {{ 'cart.general.cart_error' | t | json }},
+        cartQuantityError: {{ 'cart.general.cart_quantity_error_html' | t | json }}
+      },
+      routes: {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}'
+      },
+      moneyFormat: {{ shop.money_format | json }},
+      cartItemCount: {{ cart.item_count | json }},
+      cartMethod: {{ settings.ajax_cart_method | json }}
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+{%- liquid 
+  assign section_bg_color  = section.settings.section_bg_color 
+  assign max_width 		   = section.settings.max_width 
+  assign section_x_padding = section.settings.section_x_padding 
+  assign section_y_margin  = section.settings.section_y_margin 
+  assign col_gap 		   = section.settings.col_gap 
+  assign col_widths 	   = section.settings.col_widths 
+  assign reverse_col_order = section.settings.reverse_col_order
+  assign v_align_items	   = section.settings.v_align_items 
+-%}
+
+<div class="w-100" style="background-color: {{ section_bg_color }};">
+  <div class="flex flex-wrap lg:flex-nowrap {% if max_width != '' %}{{ max_width }} mx-auto{% endif %} {{ section_x_padding }} {{ section_y_margin }} {{ col_gap }} {% if reverse_col_order %}flex-col-reverse lg:flex-row{% endif %}">
+
+    {% for block in section.blocks %}
+
+    <div class="column {% if block.type == 'image-with-text' %}self-stretch{% else %}{{ v_align_items }}{% endif %} w-full {{ col_padding_x }} {{ col_padding_y }} {% if col_widths == 1 %}{% if forloop.index0 == 0 %}lg:w-1/3{% else %}lg:w-2/3{% endif %}{% elsif col_widths == 3 %}{% if forloop.index0 == 0 %}lg:w-2/3{% else %}lg:w-1/3{% endif %}{% else %}lg:w-1/2{% endif %}">
+
+      {% case block.type %}
+      {% when 'image-with-text' %}
+
+      {%- liquid
+          assign col_padding_x 			= block.settings.col_padding_x 
+          assign col_padding_y 			= block.settings.col_padding_y 
+          assign image_stretch 			= block.settings.image_stretch 
+          assign min_height				= block.settings.min_height 
+          assign section_color 			= block.settings.color_scheme 
+          assign image_link 			= block.settings.image_link 
+          assign image_background_color = block.settings.background_color 
+          assign heading_uppercase 		= block.settings.heading_uppercase 
+          assign heading_link 			= block.settings.heading_link 
+          assign heading_size_class 	= block.settings.heading_size 
+          assign text_size_class 		= block.settings.text_size 
+          assign text_align 			= block.settings.text_alignment 
+          assign indent_image 			= block.settings.indent_image 
+          assign font 					= block.settings.font 
+
+          assign height_class = ''
+          case min_height
+          	when 'full_screen'
+              assign height_class = 'lg:min-h-100vh h-full'
+            when '75_vh'
+              assign height_class = 'lg:min-h-75vh h-full'
+            when '50_vh'
+              assign height_class = 'lg:min-h-50vh h-full'
+          	when 'natural'
+              assign height_class = ''
+          endcase
+        -%}
+
+      <div class="flex {{ height_class }} {% if indent_image %}p-8 lg:p-16{% endif %}">
+        <div class="w-full relative">
+          {%- if image_link -%}
+          <a href="{{ block.settings.cta_link }}">
+            {%- endif -%}
+            {%- if block.settings.image != blank -%}
+            {%- assign image = block.settings.image -%}
+            {%- if block.settings.image_mobile -%}
+            {%- assign image_mobile = block.settings.image_mobile -%}
+            {%- endif -%}
+
+            {%- if block.settings.image_mobile -%}
+            <div class="hidden lg:block">
+              {%- if image_stretch -%}
+              {% render 'image-object' with image: image %}
+              {%- else -%}
+              {% render 'responsive-image' with image: image %}
+              {%- endif -%}
+            </div>
+            <div class="lg:hidden">
+              {% render 'responsive-image' with image: image_mobile %}
+            </div>
+            {%- else -%}
+            <div class="hidden lg:block">
+              {%- if image_stretch -%}
+              {% render 'image-object' with image: image %}
+              {%- else -%}
+              {% render 'responsive-image' with image: image %}
+              {%- endif -%}
+            </div>
+            <div class="lg:hidden">
+              {% render 'responsive-image' with image: image %}
+            </div>
+            {%- endif -%}
+            {%- else -%}
+            <div class="bg-placeholder-bg w-full">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg w-full h-full text-text fill-current' }}
+            </div>
+            {%- endif -%}
+            {%- if image_link -%}
+          </a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- if block.settings.title != blank or block.settings.text != blank or block.settings.cta_link != blank -%}
+      <div class="text-{{ section_color }}-text px-4 my-4 lg:my-6 flex">
+        <div class="text-center lg:{{ text_align }} break-words w-full">
+          {%- if block.settings.title != blank -%}
+          {%- if heading_link -%}<a href="{{ block.settings.cta_link }}">{%- endif -%}
+          <h2 class="font-heading {{ heading_size_class }} {% if heading_uppercase %}uppercase-f{% endif %}">{{ block.settings.title }}</h2>
+          {%- if heading_link -%}</a>{%- endif -%}
+          {%- endif -%}
+
+          {%- if block.settings.richtext != blank -%}
+          <div class="rte {{ text_size_class }} {% if block.settings.title != '' %}mt-2{% endif %} font-{{ font }}">
+            {{ block.settings.richtext }}
+          </div>
+          {%- endif -%}
+
+          {%- if block.settings.cta_link != blank and block.settings.cta_text != '' -%}
+          <div class="mt-2 lg:mt-4 text-0">
+            {%- case block.settings.cta_style -%}
+            {%- when 'link' -%}
+            {%- render 'link-underline',
+                        section_color: section_color,
+            text: block.settings.cta_text,
+            link: block.settings.cta_link,
+            -%}
+            {%- when 'button' -%}
+            <a href="{{ block.settings.cta_link }}" class="inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
+              <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ block.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+            </a>
+            {%- endcase -%}
+          </div>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endif -%}
+
+      {% when 'rich-text' %}
+
+      {%- liquid
+          assign margin_top = block.settings.margin_top 
+          assign padding_x_class = block.settings.padding_x 
+          assign max_width = block.settings.max_width 
+          assign section_color = block.settings.color_scheme 
+          assign text_size_mobile = block.settings.text_size_mobile 
+          assign text_size_desktop = block.settings.text_size_desktop 
+          assign text_align = block.settings.text_alignment 
+          assign font = block.settings.font 
+          assign heading_size = block.settings.heading_size
+        -%}
+
+      <div class="{{ padding_x_class }} py-theme mb-2 lg:mb-4">
+        <div class="flex {{ text_size_mobile }} {{ text_size_desktop }} {{ text_align }} {{ desktop_alignment }}">
+          <div class="w-full {{ max_width }} lg:mx-auto">
+
+            {%- if block.settings.title != blank -%}
+            <h2 class="font-heading {% if heading_size == 'global' %}{{ settings.base_heading_size }}{% else %}{{ heading_size }}{% endif %} mb-2 lg:mb-4">{{ block.settings.title }}</h2>
+            {%- endif -%}
+
+            <div class="rte {% if block.settings.title != '' %}lg:mt-2{% endif %} font-{{ font }} break-words">
+              {{ block.settings.text }}
+            </div>
+
+            {%- if block.settings.cta_link != blank and block.settings.cta_text != '' -%}
+            <div class="mt-4 text-0">
+              {%- case block.settings.cta_style -%}
+              {%- when 'link' -%}
+              {%- render 'link-underline',
+                    section_color: section_color,
+              text: block.settings.cta_text,
+              link: block.settings.cta_link,
+              -%}
+              {%- when 'button' -%}
+              <a href="{{ block.settings.cta_link }}" class="inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
+                <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ block.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+              </a>
+              {%- endcase -%}
+            </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+
+      {% when 'custom-html' %}
+
+      {%- if block.settings.title != blank -%}
+      <h2 class="font-heading {{ settings.base_heading_size }}">{{ block.settings.title }}</h2>  
+      {%- endif -%}
+      <div>{{ block.settings.custom_html }}</div>
+
+      {% endcase %}
+
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Columns",
+  "class": "columns",
+  "max_blocks": 2,
+  "settings": [
+	{
+      "type":       "header",
+      "content":	"Layout"
+    },
+	{
+	  "type": "color",
+	  "id": "section_bg_color",
+	  "label": "Section background color",
+	  "default": "transparent"
+	},
+	{
+	  "type": "select",
+	  "id": "max_width",
+	  "label": "Max width",
+	  "options": [
+		{ "value": "", 		       "label": "None"   },
+		{ "value": "max-w-xl",     "label": "Small"  },
+		{ "value": "max-w-3xl",	   "label": "Medium" },
+		{ "value": "max-w-screen", "label": "Large"  }
+      ],
+	  "default": ""
+	},
+	{
+      "type": "select",
+      "id": "section_x_padding",
+      "label": "Section padding",
+      "options": [
+		{
+    	  "value": "",
+    	  "label": "None"
+   		},
+		{
+    	  "value": "px-2",
+    	  "label": "Small"
+   		},
+    	{
+    	  "value": "px-4",
+    	  "label": "Medium"
+    	},
+		{
+    	  "value": "px-8",
+    	  "label": "Large"
+    	}
+      ],
+	  "default": ""
+    },
+	{
+      "type": "select",
+      "id": "section_y_margin",
+      "label": "Section margin (vertical)",
+      "options": [
+		{
+    	  "value": "",
+    	  "label": "None"
+   		},
+		{
+    	  "value": "my-2",
+    	  "label": "Small"
+   		},
+    	{
+    	  "value": "my-4",
+    	  "label": "Medium"
+    	},
+		{
+    	  "value": "my-8",
+    	  "label": "Large"
+    	}
+      ],
+	  "default": ""
+    },
+	{
+      "type": "range",
+      "id": "col_widths",
+      "label": "Column widths",
+	  "info": "Only applies on desktop width and up",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+	  "default": 2
+    },
+	{
+      "type": "select",
+      "id": "col_gap",
+      "label": "Column gap",
+      "options": [
+		{
+    	  "value": "",
+    	  "label": "None"
+   		},
+		{
+    	  "value": "lg:gap-2",
+    	  "label": "Small"
+   		},
+    	{
+    	  "value": "gap-2 lg:gap-6",
+    	  "label": "Medium"
+    	},
+		{
+    	  "value": "gap-6 lg:gap-10",
+    	  "label": "Large"
+    	}
+      ],
+	  "default": ""
+    },
+	{
+	  "type": "checkbox",
+	  "id": "reverse_col_order",
+	  "label": "Reverse column order on mobile",
+	  "default": false
+	},
+	{
+	  "type": "select",
+	  "id": "v_align_items",
+	  "label": "Vertical align items",
+	  "options": [
+		{ "value": "self-start",  "label": "Top" 	},
+		{ "value": "self-center", "label": "Middle" },
+		{ "value": "self-end",    "label": "Bottom" }
+	  ],
+	  "default": "self-center"
+	}
+  ],
+  "blocks": [
+    {
+      "type": "image-with-text",
+      "name": "Image with text",
+  	  "settings": [
+		{
+      	  "type":      "header",
+      	  "content":   "Layout"
+    	},
+		{
+		  "type": "select",
+		  "id": "col_padding_y",
+		  "label": "Column padding - Vertical",
+		  "options": [
+		  	{ "value": "", "label": "None" },
+            { "value": "py-2 lg:py-4", "label": "Small" },
+            { "value": "py-4 lg:py-8", "label": "Medium" },
+            { "value": "py-6 lg:py-12", "label": "Large" }
+		  ],
+		  "default": ""
+		},
+		{
+		  "type": "select",
+		  "id": "col_padding_x",
+		  "label": "Column padding - Horizontal",
+		  "options": [
+		  	{ "value": "", "label": "None" },
+            { "value": "px-2 lg:px-4", "label": "Small" },
+            { "value": "px-4 lg:px-8", "label": "Medium" },
+            { "value": "px-6 lg:px-12", "label": "Large" }
+		  ],
+		  "default": ""
+		},
+		{
+		  "type": "checkbox",
+		  "id": "image_stretch",
+		  "label": "Adjust image height based on other columns height",
+		  "default": false
+		},
+		{
+		  "type": "select",
+		  "id": "min_height",
+		  "label": "Min height of section",
+		  "info": "If set to 'Full screen', max height will be set as well",
+		  "options": [
+        	{ "value": "natural", 		"label": "None" 			},
+			{ "value": "50_vh", 		"label": "50% of screen" 	},
+			{ "value": "75_vh", 		"label": "75% of screen" 	},
+        	{ "value": "full_screen", 	"label": "Full screen" 		}
+      	  ],
+      	  "default":   "natural"
+		},
+		{
+      	  "type":      "header",
+      	  "content":   "Content"
+    	},
+    	{
+      	  "id": "image",
+      	  "type": "image_picker",
+      	  "label": "Image"
+    	},
+		{
+      	  "id": "image_mobile",
+      	  "type": "image_picker",
+      	  "label": "Image - mobile",
+		  "info": "Overwrites image on mobile width"
+    	},
+		{
+		  "id": "image_link",
+		  "type": "checkbox",
+		  "label": "Image link",
+		  "info": "Applies link to image if set under 'CTA'",
+		  "default": false
+		},
+		{
+      	  "type": "checkbox",
+      	  "id": "indent_image",
+      	  "label": "Indent image",
+      	  "default": false
+    	},
+    	{
+      	  "type": "select",
+      	  "id": "background_color",
+      	  "label": "Background color",
+      	  "options": [
+          	{ "value": "primary", "label": "Primary background"},
+          	{ "value": "secondary", "label": "Secondary background"},
+          	{ "value": "tertiary", "label": "Tertiary background"}
+      	  ],
+          "default":   "primary"
+        },
+        {
+          "type":      "header",
+          "content":   "Content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+		{
+          "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+            { "value": "text-sm", 	"label": "S"},
+            { "value": "text-base", "label": "M"},
+            { "value": "text-lg", 	"label": "L"},
+            { "value": "text-xl", 	"label": "XL"},
+            { "value": "text-2xl",  "label": "2XL"},
+            { "value": "text-3xl",  "label": "3XL"},
+            { "value": "text-4xl",  "label": "4XL"},
+            { "value": "text-5xl",  "label": "5XL"}
+          ],
+          "default":   "text-lg"
+        },
+        {
+          "type": "checkbox",
+          "id": "heading_uppercase",
+          "label": "Uppercase heading",
+          "default": false
+        },
+		{
+          "type": "checkbox",
+          "id": "heading_link",
+          "label": "Heading link",
+		  "info": "Applies link to heading if set under 'CTA'",
+          "default": false
+        },
+        {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Text",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_size",
+          "label": "Text size",
+          "options": [
+            { "value": "text-sm", "label": "S"},
+            { "value": "text-base", "label": "M"},
+            { "value": "text-lg", "label": "L"},
+            { "value": "text-xl", "label": "XL"},
+            { "value": "text-2xl", "label": "2XL"},
+            { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+            { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+            { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL"}
+          ],
+          "default":   "text-base"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "Font",
+          "options": [
+            {
+              "value": "heading",
+              "label": "Heading"
+            },
+            {
+              "value": "body",
+              "label": "Body"
+            }
+          ],
+          "default": "body"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "options": [
+            { "value": "text-left", "label": "Left"},
+            { "value": "text-center", "label": "Center"},
+            { "value": "text-right", "label": "Right"}
+        ],
+        "default":   "text-left"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "label": "Color scheme",
+          "options": [
+            { "value": "primary", "label": "Primary"},
+            { "value": "secondary", "label": "Secondary"},
+            { "value": "tertiary", "label": "Tertiary"}
+          ],
+          "default":   "primary"
+        },
+        {
+          "type":      "header",
+          "content":   "Call to action"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "Style",
+          "options": [
+            { "value": "link", "label": "Link"},
+            { "value": "button", "label": "Button"}
+          ],
+          "default":   "link"
+        }
+      ]
+	},
+	{
+	  "type": "rich-text",
+	  "name": "Rich text",
+	  "settings": [
+		{
+          "type":      "header",
+          "content":   "Layout"
+        },
+        {
+          "type": "select",
+          "id": "margin_top",
+          "label": "Top margin",
+          "options": [
+            { "value": "", "label": "None" },
+            { "value": "mt-2 lg:mt-4", "label": "Small"},
+            { "value": "mt-4 lg:mt-8", "label": "Medium"},
+            { "value": "mt-6 lg:mt-12", "label": "Large"}
+          ],
+          "default":   ""
+        },
+        {
+          "type": "select",
+          "id": "padding_x",
+          "label": "Padding - Horizontal",
+          "options": [
+            { "value": "", "label": "None" },
+            { "value": "px-2 lg:px-4", "label": "Small"},
+            { "value": "px-4 lg:px-8", "label": "Medium"},
+            { "value": "px-6 lg:px-12", "label": "Large"}
+          ],
+          "default":   ""
+        },
+		{
+          "type": "select",
+          "id": "max_width",
+          "label": "Max width",
+		  "info": "Only applies to desktop width",
+          "options": [
+            { "value": "", "label": "None" },
+            { "value": "lg:max-w-1/2", "label": "50%"},
+            { "value": "lg:max-w-3/4", "label": "75%"}
+          ],
+          "default":   ""
+        },
+        {
+          "type":      "header",
+          "content":   "Text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+		{
+		  "type": "select",
+          "id": "heading_size",
+          "label": "Heading size",
+          "options": [
+			{ "value": "global", 				"label": "Use global value" },
+            { "value": "text-sm lg:text-base", 	"label": "S" 				},
+            { "value": "text-base lg:text-lg", 	"label": "M" 				},
+            { "value": "text-lg lg:text-xl", 	"label": "L" 				},
+            { "value": "text-xl lg:text-2xl", 	"label": "XL" 				},
+            { "value": "text-2xl lg:text-3xl", 	"label": "2XL" 				}
+          ],
+          "default":   "global"
+		},
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_size_mobile",
+          "label": "Text size - mobile",
+          "options": [
+            { "value": "text-sm", "label": "S"},
+            { "value": "text-base", "label": "M"},
+            { "value": "text-lg", "label": "L"},
+            { "value": "text-xl", "label": "XL"},
+            { "value": "text-2xl", "label": "2XL"}
+          ],
+          "default":   "text-2xl"
+        },
+        {
+          "type": "select",
+          "id": "text_size_desktop",
+          "label": "Text size - desktop",
+          "options": [
+            { "value": "default", "label": "Same as mobile"},
+            { "value": "lg:text-xl","label":  "XL"},
+            { "value": "lg:text-2xl","label":  "2XL"},
+            { "value": "lg:text-3xl", "label": "3XL"},
+            { "value": "lg:text-4xl", "label": "4XL"},
+            { "value": "lg:text-5xl", "label": "5XL" },
+            { "value": "lg:text-6xl", "label": "6XL" },
+            { "value": "lg:text-7xl", "label": "7XL" }
+          ],
+          "default":   "lg:text-5xl"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "Font",
+          "options": [
+            {
+              "value": "heading",
+              "label": "Heading"
+            },
+            {
+              "value": "body",
+              "label": "Body"
+            }
+          ],
+          "default": "body"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text alignment",
+          "options": [
+            { "value": "text-left", "label": "Left"},
+            { "value": "text-center", "label": "Center"},
+            { "value": "text-right", "label": "Right"}
+          ],
+          "default":   "text-left"
+        },
+        {
+          "type":      "header",
+          "content":   "Call to action"
+        },
+        {
+          "type": "url",
+          "id": "cta_link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "cta_style",
+          "label": "Style",
+          "options": [
+            { "value": "link", "label": "Link"},
+            { "value": "button", "label": "Button"}
+          ],
+          "default":   "link"
+        },
+        {
+          "type":      "header",
+          "content":   "Color"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "label": "Color scheme",
+          "options": [
+              { "value": "primary", "label": "Primary"},
+              { "value": "secondary", "label": "Secondary"},
+              { "value": "tertiary", "label": "Tertiary"}
+          ],
+          "default":   "primary"
+        }
+	  ]
+	},
+	{
+	  "type": "custom-html",
+	  "name": "Custom HTML",
+	  "settings": [
+	  	{
+          "type": 	"text",
+          "id": 	"title",
+          "label": 	"Title"
+        },
+        {
+          "type": 	"textarea",
+          "id": 	"custom_html",
+          "label": 	"HTML"
+        }
+	  ]
+	}
+  ],
+  "presets": [
+    {
+      "name": "Columns",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,15 @@
+{% assign policy_name = handle | replace: '-', '_' %}
+{% assign policy = shop[policy_name] %}
+
+<section class="page text-primary-text bg-primary-background py-4 lg:py-8">
+  <div class="section-x-padding py-theme lg:flex lg:justify-center">
+    <div class="lg:w-2/3">
+      <div class="text-center">
+        <h1 class="font-heading text-xl break-words mb-8">{{ policy.title }}</h1>
+      </div>
+      <div class="rte pt-4 pb-8">
+        {{ policy.body }}
+      </div>
+    </div>
+  </div>
+</section>

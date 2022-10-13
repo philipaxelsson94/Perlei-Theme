@@ -1,0 +1,54 @@
+<div class="bg-{{ image_background_color }}-background {{ image_width_desktop }} {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4 h-full w-full{% endunless %} {% if indent_image %}p-8 lg:p-16{% endif %}">
+  <div class="relative min-h-full">
+    {%- if section.settings.image != blank -%}
+    {%- assign image = section.settings.image -%}
+    {%- if fill_image -%}
+    <div class="hidden lg:block">
+      {% render 'image-object' with
+              image: image
+      %}
+    </div>
+    <div class="block lg:hidden">
+      {% render 'responsive-image' with image: image %}
+    </div>
+    {%- else -%}
+    {% render 'responsive-image' with image: image %}
+    {%- endif -%}
+    {%- else -%}
+    <div class="bg-placeholder-bg w-full">
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg w-full h-full text-text fill-current' }}
+    </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<div class="{{ text_width_desktop }} bg-{{ section_color }}-background text-{{ section_color }}-text relative px-8 pb-8 lg:py-theme flex {{ text_position }}">
+  <div class="text-center lg:{{ text_align }} break-words w-full">
+    {%- if section.settings.title != blank -%}
+    <h2 class="font-heading {{ settings.base_heading_size }}">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.richtext != blank -%}
+    <div class="rte {{ text_size_class }} {% if section.settings.title != '' %}mt-2{% endif %} font-{{ font }}">
+      {{ section.settings.richtext }}
+    </div>
+    {%- endif -%}
+
+    {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
+    <div class="mt-4 lg:mt-6 text-0">
+      {%- case section.settings.cta_style -%}
+      {%- when 'link' -%}
+      {%- render 'link-underline',
+            section_color: section_color,
+      text: section.settings.cta_text,
+      link: section.settings.cta_link,
+      -%}
+      {%- when 'button' -%}
+      <a href="{{ section.settings.cta_link }}" class="inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
+        <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+      </a>
+      {%- endcase -%}
+    </div>
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{% if false %}
+            {% assign tax_exempt_form_header_text = "EU VAT ID" %}
+            {% assign tax_exempt_form_subtitle_text = "(VAT will be deducted at payment step)" %}
+            {% assign tax_exempt_form_error_message = "Please enter a valid EU VAT ID (e.g. DK123..., FR123...)" %}
+            {% assign tax_exempt_form_validate_country_code_message = "Your country is not eligible for VAT Exemption in this store." %}
+            {% assign tax_exempt_form_success_message = "Your VAT ID has been successfully validated." %}
+            {% assign show_vat_apply_to = "0" %}
+            {% assign show_vat_customer_tags = "" | split: "," %}
+            {% capture taxExemptForm %}<div class="bss-b2b-tax-ex-wrapper">
+  <h3>{{ tax_exempt_form_header_text }}</h3>
+  <p>{{ tax_exempt_form_subtitle_text }}</p>
+  <input type="text" name="bss-b2b-eu-tax" />
+  <div class="bss-b2b-tax-ex-message" data-error-message="{{ tax_exempt_form_error_message }}" data-success-message="{{ tax_exempt_form_success_message }}" data-validate-country-code-message="{{ tax_exempt_form_validate_country_code_message }}"></div>
+</div>  {% endcapture %}
+{% assign isShowVATForm = false %}
+{% assign customerTags = customer.tags | join: ', ' | downcase %}
+{% if show_vat_apply_to == "0" %}
+    {% assign isShowVATForm = true %}
+{% elsif show_vat_apply_to == "1" %}
+    {% if customer %}
+        {% assign isShowVATForm = true %}
+    {% endif %}
+{% elsif show_vat_apply_to == "2" %}
+    {% unless customer %}
+        {% assign isShowVATForm = true %}
+    {% endunless %}
+{% elsif show_vat_apply_to == "3" %}
+    {% for tag in show_vat_customer_tags %}
+        {% assign downcaseTag = tag | downcase %}
+        {% if customerTags contains downcaseTag %}
+            {% assign isShowVATForm = true %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% if isShowVATForm %}
+    {{ taxExemptForm }}
+{% endif %}{% endif %}

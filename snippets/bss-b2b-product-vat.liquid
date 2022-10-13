@@ -1,0 +1,67 @@
+{% if false %}
+            {% assign excluded_vat_text = "exc. VAT | " %}
+            {% assign included_vat_text = "inc. VAT" %}
+        <div class="bss-b2b-product-vat"  data-product-id="{{ product.id }}">
+        <span class="bss-b2b-product-vat-price-no-vat" data-excluded-vat-text="{{ excluded_vat_text }}">
+
+        </span>
+        <span class="bss-b2b-product-vat-price-has-vat" data-included-vat-text="{{ included_vat_text }}">
+
+        </span>
+
+</div>
+<style id="bss-b2b-tax-inc-excl" type="text/css">
+ [data-price-container],
+.product-single__meta-list,
+.shopify-section .product__price,
+.shopify-section .product__policies.rte,
+.shopify-section .ProductMeta__PriceList.Heading ,
+.product-template-section .inline-list,
+.product-single__prices,
+.product-single__policies,
+ #shopify-section-product [data-price],
+ .current-price,
+ .shopify-section .price.price--large,
+ .shopify-section .product-page--pricing,
+ .product-page__policies.rte,
+ #shopify-section-product-template .product-details .offers,
+ .product-main .price-box,
+ .product-page-info__price,
+ [data-key="p-price"] .module,
+ #shopify-section-product-template .modal_price
+ {
+  display: none !important;
+}
+ meta[itemprop="price"] {
+  display: none !important;
+ }
+ .bss-b2b-product-vat {
+    padding: 5px 0;
+ }
+</style>
+<script>
+    var bssB2BProduct = {{ product | json }};
+
+    bssB2BProduct.page_type = {{ request.page_type | json }};
+
+
+    bssB2BProduct.variantIdArrayMap = (function() {
+      var item = {};
+
+      {% for variant in product.variants %}
+        {% assign variant_id = variant.id %}
+        item[{{ variant_id }}] = {{ variant | json }};
+        item[{{ variant_id }}].taxable = {{ variant.taxable | json }};
+        item[{{ variant_id }}].price = {{ variant.price | json }};
+        item[{{ variant_id }}].price_formatted = {{ variant.price | money | json }};
+        item[{{ variant_id }}].price_formatted_without_trailing_zeros = {{ variant.price | money_without_trailing_zeros | json }};
+        item[{{ variant_id }}].compare_at_price_formatted = {{ variant.compare_at_price | money | json }};
+        item[{{ variant_id }}].compare_at_price_formatted_without_trailing_zeros = {{ variant.compare_at_price | money_without_trailing_zeros | json }};
+        item[{{ variant_id }}].product_id = {{ product.id | json }}
+
+      {% endfor %}
+
+      return item;
+    })();
+</script>
+{% endif %}

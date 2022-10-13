@@ -1,0 +1,382 @@
+{%- liquid
+  
+  assign image_1 = section.settings.image_1
+  assign image_2 = section.settings.image_2
+  assign image_3 = section.settings.image_3
+  assign image_4 = section.settings.image_4
+  
+-%}
+
+<section class="relative min-h-full">
+  <div class="row">
+      <div class="col custom-block block-1">
+        <a class="block-link" href="/products/brows-on-fleek">
+          <h2 class="main-heading font-heading text-lg lg:text-xl lg:mb-8 break-words">
+            Let your eyebrows be your key summer accessory!
+          </h2>
+          <div class="sub-content font-heading">
+            <span class="sub-heading mb-4 lg:mb-0 text-base lg:text-lg">Brows on fleek</span>
+            <div style="flex-grow: 1;">
+              <p class="mb-2 lg:mb-0">Brow Lift &amp; Tweezer</p>
+              <p class="lg:inline-block lg:mr-2">Campaign Price</p>
+              <p class="lg:inline-block">299 SEK&nbsp;<span class="strikethrough lg:ml-2">369 SEK</span></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    <div class="col custom-block block-2">
+      <a class="block-link" href="/products/brows-on-fleek">
+      	{% render 'responsive-image' with image: image_1 %}
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a class="block-link" href="/products/brow-lift-clear">
+        <div class="custom-block block-3">
+          {% render 'responsive-image' with image: image_2 %}
+          <div class="block-text py-8">
+            <p class="mb-4 text-base lg:text-lg">You don't want any heavy eyebrow make-up for summer! All you need is something to keep them tamed, use our killer our Brow Lift Clear to hold everything in place.</p>
+            <p class="font-heading text-uppercase">
+              <span>Brow Lift Clear</span>
+              <br/>
+              <span>229 SEK</span>
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col">
+      <a class="block-link" href="/products/brow-lift-brown">
+      	<div class="custom-block block-4">
+          {% render 'responsive-image' with image: image_3 %}
+          <div class="block-text py-8 lg:px-8">
+            <p class="mb-4 text-base lg:text-lg">Want to add a bit of drama for the evening look,&nbsp;<br/>use our Brow Lift Brown!</p>
+            <p class="font-heading text-uppercase">
+              <span>Brow Lift Brown</span>
+              <br/>
+              <span>229 SEK</span>
+            </p>
+          </div>
+      	</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-uppercase {
+  	text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} section .block-link {
+  	transition: all .3s ease;
+  }
+  #shopify-section-{{ section.id }} section .block-link:hover {
+  	opacity: .75
+  }
+  #shopify-section-{{ section.id }} section {
+  	padding: 1rem 0;
+  }
+  #shopify-section-{{ section.id }} section .row {
+    position: relative;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+  }
+  #shopify-section-{{ section.id }} section .row:nth-child(1) {
+    padding-bottom: 20%;
+  }
+  #shopify-section-{{ section.id }} section .col {
+    width: 100%;
+  }
+  #shopify-section-{{ section.id }} .custom-block.block-1 .main-heading {
+  	text-transform: uppercase;
+    max-width: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    left: 1rem;
+  }
+  #shopify-section-{{ section.id }} .custom-block.block-1 .sub-heading {
+  	display: inline-block;
+    padding: .25rem .5rem;
+    background-color: #f16380;
+    text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} .custom-block.block-1 .sub-content {
+  	text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    width: 45%;
+    text-transform: uppercase;
+  }
+  #shopify-section-{{ section.id }} .custom-block.block-1 .sub-content .strikethrough {
+  	opacity: .5;
+    text-decoration: line-through;
+  }
+  
+  #shopify-section-{{ section.id }} .custom-block.block-3,
+  #shopify-section-{{ section.id }} .custom-block.block-4 {
+  	text-align: center;
+  }
+  
+  @media screen and (min-width: 750px) {
+    #shopify-section-{{ section.id }} section {
+  	  padding: 4rem 0;
+  	}
+    #shopify-section-{{ section.id }} section .row {
+      margin: 2rem auto;
+      padding: 0 2rem;
+      max-width: 1080px;
+    }
+    #shopify-section-{{ section.id }} section .row:nth-child(1) {
+      padding-bottom: 15%;
+    }
+  	#shopify-section-{{ section.id }} section .col {
+      width: 50%;
+  	}
+    #shopify-section-{{ section.id }} .custom-block.block-1 {
+      padding-top: 4%;
+      transform: scale(1.125);
+      transform-origin: left top;
+    }
+    #shopify-section-{{ section.id }} .custom-block.block-1 .main-heading {
+      position: relative;
+      max-width: 80%;
+      top: unset;
+      left: unset;
+    }
+    #shopify-section-{{ section.id }} .custom-block.block-1 .sub-content {
+      position: relative;
+      right: unset;
+      bottom: unset;
+      width: unset;
+      text-align: left;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    #shopify-section-{{ section.id }} .custom-block.block-1 .sub-heading {
+      flex-grow: 0;
+    }
+    #shopify-section-{{ section.id }} .custom-block.block-2 {
+      transform: scale(1.33);
+	  transform-origin: top right;
+    }
+    
+    #shopify-section-{{ section.id }} section .row:nth-child(2) {
+      gap: 4rem;
+    }
+    #shopify-section-{{ section.id }} section .row:nth-child(2) .col {
+      width: calc(50% - 2rem);
+    }
+    #shopify-section-{{ section.id }} .custom-block.block-4 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+  	#shopify-section-{{ section.id }} section .row:nth-child(1) {
+      padding-bottom: 14rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Section 1",
+  "settings": [
+    {
+      "type":      "header",
+      "content":   "Content"
+    },
+    {
+      "id": "image_1",
+      "type": "image_picker",
+      "label": "Image 1"
+    },
+	{
+      "id": "image_2",
+      "type": "image_picker",
+      "label": "Image 2"
+    },
+	{
+      "id": "image_3",
+      "type": "image_picker",
+      "label": "Image 3"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position on desktop",
+      "default": "right",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image size on desktop",
+      "default": "half",
+      "options": [
+        {
+          "value": "third",
+          "label": "One third"
+        },
+        {
+          "value": "half",
+          "label": "One half"
+        },
+        {
+          "value": "two_thirds",
+          "label": "Two thirds"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "indent_image",
+      "label": "Indent image",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "fill_image",
+      "label": "Fit image to text",
+      "default": false,
+      "info": "This setting will crop the image on desktop"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background color",
+      "options": [
+          { "value": "primary", "label": "Primary background"},
+          { "value": "secondary", "label": "Secondary background"},
+          { "value": "tertiary", "label": "Tertiary background"}
+      ],
+      "default":   "primary"
+    },
+    {
+      "type":      "header",
+      "content":   "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        { "value": "text-sm", "label": "S"},
+        { "value": "text-base", "label": "M"},
+        { "value": "text-lg", "label": "L"},
+        { "value": "text-xl", "label": "XL"},
+        { "value": "text-2xl", "label": "2XL"},
+        { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+        { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+        { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL"}
+      ],
+      "default":   "text-base"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Font",
+      "options": [
+        {
+          "value": "heading",
+          "label": "Heading"
+        },
+        {
+          "value": "body",
+          "label": "Body"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "text-left", "label": "Left"},
+        { "value": "text-center", "label": "Center"},
+        { "value": "text-right", "label": "Right"}
+      ],
+      "default":   "text-left"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        { "value": "items-start", "label": "Top"},
+        { "value": "items-center", "label": "Middle"},
+        { "value": "items-end", "label": "Bottom"}
+      ],
+      "default":   "items-center"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"}
+      ],
+      "default":   "primary"
+    },
+    {
+      "type":      "header",
+      "content":   "Call to action"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "cta_style",
+      "label": "Style",
+      "options": [
+        { "value": "link", "label": "Link"},
+        { "value": "button", "label": "Button"}
+      ],
+      "default":   "link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Section 1"
+    }
+  ]
+}
+{% endschema %}

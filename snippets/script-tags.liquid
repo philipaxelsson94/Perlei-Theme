@@ -1,0 +1,18 @@
+
+{%- if layout == 'theme' -%}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+window.baseAssetsUrl = '{{ 'theme.min.js' | asset_url | split: 'assets/theme.min.js' | first }}';
+</script>
+<script type="module" src="{{ 'theme.min.js' | asset_url }}" defer="defer"></script>
+<script>
+window.baseAssetsUrl = '{{ 'hubso.js' | asset_url | split: 'assets/hubso.js' | first }}';
+</script>
+<script type="module" src="{{ 'hubso.js' | asset_url }}" defer="defer"></script>
+{%- endif -%} {%- if layout == 'giftcard' -%}
+<script>
+window.baseAssetsUrl = '{{ 'giftcard.min.js' | asset_url | split: 'assets/giftcard.min.js' | first }}';
+</script>
+<script type="module" src="{{ 'giftcard.min.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}

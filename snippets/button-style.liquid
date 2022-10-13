@@ -1,0 +1,12 @@
+{%- liquid
+  case settings.button_style 
+    when 'slightly_rounded' 
+      echo 'rounded-md'
+    when 'rounded' 
+      echo 'rounded-full'
+  endcase 
+  
+  if settings.button_bold_text
+  	echo ' font-bold'
+  endif 
+-%}

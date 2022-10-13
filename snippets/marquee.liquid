@@ -1,0 +1,102 @@
+{%- liquid
+  assign speed_number = 320 | minus: speed_number | divided_by: 7
+-%}
+
+<div id="marquee-{{ id }}" class="py-2 marquee bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden">
+  <div class="marquee-container inline-block whitespace-nowrap {% if font %}font-{{ font }}{% endif %}" aria-hidden="true">
+    {%- if repeat_text -%}
+      {% for i in (1..5) %}
+      <span {% if i > 1 %}aria-hidden="true"{% endif %}>{{ text }}</span>
+      {% endfor %}
+    {%- else -%}
+      <span>{{ text }}</span>
+    {%- endif -%}
+  </div>
+</div>
+
+<style>
+  #marquee-{{ id }} {
+    {% if text_size_mod %}
+      --font-size: calc(5vw * (var(--factor) * {{ text_size_mod }}));
+    {% else %}
+      --font-size: calc(5vw * var(--factor));
+    {% endif %}
+    --speed: {{ speed_number }}s;
+  }
+  .marquee {
+    position: relative;
+    overflow: hidden;
+    --factor: .8;
+    --offset: calc(10vw * var(--factor));
+    --move-initial: calc(-20% + var(--offset));
+    --move-final: calc(-40% + var(--offset));
+  }
+  
+  .marquee-container {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee var(--speed) linear infinite;
+    animation-play-state: paused;
+  }
+  
+  .marquee .marquee-container span {
+    font-size: var(--font-size);
+    {% comment %}padding: 0 calc(var(--font-size) / 5);{% endcomment %}
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    #marquee-{{ id }} .marquee-container {
+      animation-play-state: running;
+    }
+  }
+
+  @keyframes marquee {
+    0% { transform: translate3d(var(--move-initial), 0, 0); }
+    100% { transform: translate3d(var(--move-final), 0, 0); }
+  }
+
+  @media screen and (min-width: 456px) {
+    .marquee { --factor: .6; }
+  }
+  @media screen and (min-width: 768px) {
+    .marquee { --factor: .4; }
+  }
+  @media screen and (min-width: 1080px) {
+    .marquee { --factor: .2; }
+  }
+  
+</style>
+
+{% comment %}
+{%- liquid
+  assign speed_number = 320 | minus: speed_number
+-%}
+{%- capture speed -%}marquee {{ speed_number}}s linear infinite{%- endcapture -%}
+<div id="marquee-{{ id }}" class="{% if text_size_class contains 'xl' %}py-4{% else %}py-2{% endif %} marquee bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden">
+  {%- if link != blank -%}
+  <a href="{{ link }}" class="text-{{ section_color }}-text hover:text-{{ section_color }}-accent">
+  {%- endif -%}
+  <div class="marquee-container inline-block whitespace-nowrap pl-100 font-{{ font }} {{ text_size_class }}">
+    {%- if repeat_text -%}
+      {% for i in (1..4) %}
+      <span {% if i > 1 %}aria-hidden="true"{% endif %}>{{ text }}</span>
+      {% endfor %}
+    {%- else -%}
+      <span>{{ text }}</span>
+    {%- endif -%}
+  </div>
+  {%- if link != blank -%}
+  </a>
+  {% endif %}
+</div>
+
+<style>
+@media (prefers-reduced-motion: no-preference) {
+  #marquee-{{ id }} .marquee-container {
+    animation: {{ speed }} {{ direction }};
+  }
+}
+</style>
+{% endcomment %}

@@ -1,0 +1,283 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Rich text" section on the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the rich text section
+  - Text: description of the rich text section
+{%- endcomment -%}
+{%- liquid
+  assign section_bg_color = section.settings.section_bg_color 
+  assign padding_top = section.settings.padding_top 
+  assign margin_bottom = section.settings.margin_bottom 
+  assign padding_x_class = section.settings.padding_x 
+  assign section_color = section.settings.color_scheme 
+  assign text_size_mobile = section.settings.text_size_mobile 
+  assign text_size_desktop = section.settings.text_size_desktop 
+  assign text_align = section.settings.text_alignment 
+  assign font = section.settings.font 
+  assign cta_margin_top = section.settings.cta_margin_top
+
+  case section.settings.desktop_width
+    when 'two_thirds'
+      assign desktop_width = 'lg:w-3/4'
+    when 'half'
+      assign desktop_width = 'lg:w-1/2'
+    else
+      assign desktop_width = 'lg:w-full'
+  endcase
+
+  case section.settings.desktop_alignment
+    when 'left'
+      assign desktop_alignment = 'justify-start'
+    when 'right'
+      assign desktop_alignment = 'justify-end'
+    else
+      assign desktop_alignment = 'justify-center'
+  endcase
+-%}
+<section class="bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden border-t-grid border-grid-color {{ padding_top }} {{ margin_bottom }}" style="background-color: {{ section_bg_color }};">
+  <div class="{{ padding_x_class }} py-theme mb-2 lg:mb-4">
+    <div class="flex {{ text_size_mobile }} {{ text_size_desktop }} {{ text_align }} {{ desktop_alignment }}">
+      <div class="w-full {{ desktop_width }}">
+
+        {%- if section.settings.title != blank -%}
+        <h2 class="font-heading {{ settings.base_heading_size }}">{{ section.settings.title }}</h2>
+        {%- endif -%}
+
+        <div class="rte {% if section.settings.title != '' %}lg:mt-2{% endif %} font-{{ font }} break-words">
+          {{ section.settings.text }}
+        </div>
+
+        {%- if section.settings.cta_link != blank and section.settings.cta_text != '' -%}
+        <div class="{{ cta_margin_top }} text-0">
+          {%- case section.settings.cta_style -%}
+          {%- when 'link' -%}
+            {%- render 'link-underline',
+              section_color: section_color,
+              text: section.settings.cta_text,
+              link: section.settings.cta_link,
+            -%}
+          {%- when 'button' -%}
+            <a href="{{ section.settings.cta_link }}" class="inline-flex justify-center items-center text-base px-8 py-2 {% render 'button-style', section_color: section_color %}  {% render 'button-color', section_color: section_color %} ">
+              <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+            </a>
+          {%- when 'button-large' -%}
+          	<a href="{{ section.settings.cta_link }}" class="inline-flex justify-center items-center text-lg px-8 py-4 {% render 'button-style', section_color: section_color %} {% render 'button-color', section_color: section_color %} ">
+              <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ section.settings.cta_text }}</span><span class="-mt-1">{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+            </a>
+          {%- endcase -%}
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Rich text",
+    "settings": [
+	  {
+        "type":      "header",
+        "content":   "Layout"
+      },
+	  {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section background color",
+        "default": "transparent"
+      },
+	  {
+        "type": "select",
+        "id": "padding_top",
+        "label": "Top padding",
+        "options": [
+		  { "value": "", "label": "None" },
+          { "value": "pt-2 lg:pt-4", "label": "Small"},
+          { "value": "pt-4 lg:pt-8", "label": "Medium"},
+          { "value": "pt-6 lg:pt-12", "label": "Large"}
+        ],
+        "default":   ""
+      },
+	  {
+        "type": "select",
+        "id": "margin_bottom",
+        "label": "Bottom margin",
+        "options": [
+		  { "value": "", 				"label": "None" 	},
+          { "value": "mb-2 lg:mb-4", 	"label": "Small" 	},
+          { "value": "mb-4 lg:mb-8", 	"label": "Medium" 	},
+          { "value": "mb-6 lg:mb-12", 	"label": "Large" 	}
+        ],
+        "default":   ""
+      },
+	  {
+        "type": "select",
+        "id": "padding_x",
+        "label": "Padding - Horizontal",
+        "options": [
+		  { "value": "", "label": "None" },
+          { "value": "px-2 lg:px-4", "label": "Small"},
+          { "value": "px-4 lg:px-8", "label": "Medium"},
+          { "value": "px-6 lg:px-12", "label": "Large"}
+        ],
+        "default":   ""
+      },
+	  {
+        "type":      "header",
+        "content":   "Text"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+      },
+      {
+        "type": "select",
+        "id": "text_size_mobile",
+        "label": "Text size - mobile",
+        "options": [
+          { "value": "text-sm", "label": "S"},
+          { "value": "text-base", "label": "M"},
+          { "value": "text-lg", "label": "L"},
+          { "value": "text-xl", "label": "XL"},
+          { "value": "text-2xl", "label": "2XL"}
+        ],
+        "default":   "text-2xl"
+      },
+      {
+        "type": "select",
+        "id": "text_size_desktop",
+        "label": "Text size - desktop",
+        "options": [
+          { "value": "default", "label": "Same as mobile"},
+		  { "value": "lg:text-xl","label":  "XL"},
+          { "value": "lg:text-2xl","label":  "2XL"},
+          { "value": "lg:text-3xl", "label": "3XL"},
+          { "value": "lg:text-4xl", "label": "4XL"},
+          { "value": "lg:text-5xl", "label": "5XL" },
+          { "value": "lg:text-6xl", "label": "6XL" },
+          { "value": "lg:text-7xl", "label": "7XL" }
+        ],
+        "default":   "lg:text-5xl"
+      },
+      {
+        "type": "select",
+        "id": "font",
+        "label": "Font",
+        "options": [
+          {
+            "value": "heading",
+            "label": "Heading"
+          },
+          {
+            "value": "body",
+            "label": "Body"
+          }
+        ],
+        "default": "body"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          { "value": "text-left", "label": "Left"},
+          { "value": "text-center", "label": "Center"},
+          { "value": "text-right", "label": "Right"}
+        ],
+        "default":   "text-left"
+      },
+      {
+        "type":      "header",
+        "content":   "Call to action"
+      },
+	  {
+        "type": "select",
+        "id": "cta_margin_top",
+        "label": "CTA - Top margin",
+        "options": [
+		  { "value": "", "label": "None" },
+          { "value": "mt-2 lg:mt-4", "label": "Small"},
+          { "value": "mt-4 lg:mt-8", "label": "Medium"},
+          { "value": "mt-6 lg:mt-12", "label": "Large"}
+        ],
+        "default":   "mt-2 lg:mt-4"
+      },
+      {
+        "type": "url",
+        "id": "cta_link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "cta_style",
+        "label": "Style",
+        "options": [
+          { "value": "link", "label": "Link" },
+          { "value": "button", "label": "Button" },
+		  { "value": "button-large", "label": "Large button" }
+        ],
+        "default":   "link"
+      },
+      {
+        "type":      "header",
+        "content":   "Desktop layout"
+      },
+      {
+        "type": "select",
+        "id": "desktop_width",
+        "label": "Width",
+        "options": [
+          { "value": "full", "label": "Full"},
+          { "value": "two_thirds", "label": "Two thirds"},
+          { "value": "half", "label": "Half"}
+        ],
+        "default":   "full"
+      },
+      {
+        "type": "select",
+        "id": "desktop_alignment",
+        "label": "Position",
+        "options": [
+          { "value": "left", "label": "Left"},
+          { "value": "center", "label": "Center"},
+          { "value": "right", "label": "Right"}
+        ],
+        "default":   "left",
+        "info": "Does not apply when width is set to full."
+      },
+      {
+        "type":      "header",
+        "content":   "Color"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "options": [
+          { "value": "primary", "label": "Primary" },
+          { "value": "secondary", "label": "Secondary" },
+          { "value": "tertiary", "label": "Tertiary" },
+		  { "value": "quaternary", "label": "Quaternary" }
+        ],
+        "default":   "primary"
+      }
+    ],
+    "presets": [{
+        "name": "Rich text"
+    }]
+  }
+{% endschema %}
