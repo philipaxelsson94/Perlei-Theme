@@ -476,13 +476,15 @@
         {%- endfor -%}
       </div>
     </div>
-    {%- for block in section.blocks -%}
-      {% if block.type == 'custom_images' %}
-        {{ block.settings.img_caption_1 }}
-        {{ block.settings.img_caption_2 }}
-      {% endif %}
-    {%- endfor -%}
     <div class="product-description {% if no_social_blocks %}lg:col-start-1{% else %}lg:col-start-4{% endif %} lg:col-end-10 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding py-theme product-block-area">
+      {%- for block in section.blocks -%}
+        {% if block.type == 'custom_images' %}
+          <div class="block custom_icons">
+            {{ block.settings.img_caption_1 }}
+            {{ block.settings.img_caption_2 }}
+          </div>
+        {% endif %}
+      {%- endfor -%}
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
       {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' -%}
