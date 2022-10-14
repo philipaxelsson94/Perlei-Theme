@@ -483,25 +483,33 @@
             {% if block.settings.img_1 %}
               <div class="custom_icon">
                 {% render 'responsive-image' with image: block.settings.img_1 %}
-                {{ block.settings.img_caption_1 }}
+                <div class="custon_icon--caption">
+                  {{ block.settings.img_caption_1 }}
+                </div>
               </div>
             {% endif %}
-          {% if block.settings.img_1 %}
+          {% if block.settings.img_2 %}
               <div class="custom_icon">
                 {% render 'responsive-image' with image: block.settings.img_1 %}
-                {{ block.settings.img_caption_1 }}
+                <div class="custon_icon--caption">
+                  {{ block.settings.img_caption_2 }}
+                </div>
               </div>
             {% endif %}
-          {% if block.settings.img_1 %}
+          {% if block.settings.img_3 %}
               <div class="custom_icon">
-                {% render 'responsive-image' with image: block.settings.img_1 %}
-                {{ block.settings.img_caption_1 }}
+                {% render 'responsive-image' with image: block.settings.img_3 %}
+                <div class="custon_icon--caption">
+                  {{ block.settings.img_caption_3 }}
+                </div>
               </div>
             {% endif %}
-          {% if block.settings.img_1 %}
+          {% if block.settings.img_4 %}
               <div class="custom_icon">
-                {% render 'responsive-image' with image: block.settings.img_1 %}
-                {{ block.settings.img_caption_1 }}
+                {% render 'responsive-image' with image: block.settings.img_4 %}
+                <div class="custon_icon--caption">
+                  {{ block.settings.img_caption_4 }}
+                </div>
               </div>
             {% endif %}
           </div>
@@ -1488,6 +1496,36 @@
             "type": "text",
             "id": "img_caption_2",
             "label": "Image 2 - Caption",
+            "default": "Image caption"
+          },
+          {
+            "type": "header",
+            "content": "Image 3"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_3",
+            "label": "Image 3"
+          },
+          {
+            "type": "text",
+            "id": "img_caption_3",
+            "label": "Image 3 - Caption",
+            "default": "Image caption"
+          },
+          {
+            "type": "header",
+            "content": "Image 4"
+          },
+          {
+            "type": "image_picker",
+            "id": "img_4",
+            "label": "Image 4"
+          },
+          {
+            "type": "text",
+            "id": "img_caption_4",
+            "label": "Image 4 - Caption",
             "default": "Image caption"
           }
         ] 
