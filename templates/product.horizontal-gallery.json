@@ -107,6 +107,47 @@
         "cta_style": "link"
       }
     },
+    "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b": {
+      "type": "columns-icons",
+      "blocks": {
+        "fbb7d3d0-9745-4541-bd31-98ba14faf041": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "{% render 'icon-cruelty-free' %}"
+          }
+        },
+        "9eb8346c-5db2-48fd-a557-1ec7a191df70": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "{% render 'icon-made-in-italy' %}"
+          }
+        },
+        "4f68cd50-ab80-4d01-990f-f434fb8a4439": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "{% render 'icon-fragrance-free' %}"
+          }
+        }
+      },
+      "block_order": [
+        "fbb7d3d0-9745-4541-bd31-98ba14faf041",
+        "9eb8346c-5db2-48fd-a557-1ec7a191df70",
+        "4f68cd50-ab80-4d01-990f-f434fb8a4439"
+      ],
+      "settings": {
+        "section_bg_color": "rgba(0,0,0,0)",
+        "max_width": "max-w-xl",
+        "section_x_padding": "",
+        "section_y_margin": "my-8",
+        "col_widths": 2,
+        "col_gap": "gap-6 lg:gap-10",
+        "reverse_col_order": false,
+        "v_align_items": "self-center"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -173,55 +214,14 @@
       ],
       "settings": {
       }
-    },
-    "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b": {
-      "type": "columns-icons",
-      "blocks": {
-        "fbb7d3d0-9745-4541-bd31-98ba14faf041": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "custom_html": "{% render 'icon-cruelty-free' %}"
-          }
-        },
-        "9eb8346c-5db2-48fd-a557-1ec7a191df70": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "custom_html": "{% render 'icon-made-in-italy' %}"
-          }
-        },
-        "4f68cd50-ab80-4d01-990f-f434fb8a4439": {
-          "type": "custom-html",
-          "settings": {
-            "title": "",
-            "custom_html": "{% render 'icon-fragrance-free' %}"
-          }
-        }
-      },
-      "block_order": [
-        "fbb7d3d0-9745-4541-bd31-98ba14faf041",
-        "9eb8346c-5db2-48fd-a557-1ec7a191df70",
-        "4f68cd50-ab80-4d01-990f-f434fb8a4439"
-      ],
-      "settings": {
-        "section_bg_color": "transparent",
-        "max_width": "max-w-xl",
-        "section_x_padding": "",
-        "section_y_margin": "my-8",
-        "col_widths": 2,
-        "col_gap": "gap-6 lg:gap-10",
-        "reverse_col_order": false,
-        "v_align_items": "self-center"
-      }
     }
   },
   "order": [
     "main-product-horizontal-gallery",
     "be69bfa5-727d-416a-ac4f-5dedddbe6a4d",
+    "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
     "1663159752996b81f6",
-    "1643190266cb6795f8",
-    "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b"
+    "1643190266cb6795f8"
   ]
 }
