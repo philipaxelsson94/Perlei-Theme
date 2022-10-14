@@ -188,7 +188,7 @@
           "type": "custom-html",
           "settings": {
             "title": "",
-            "custom_html": "{% render 'resurs_20.svg' %}\n<h1> hej <\/h1>"
+            "custom_html": "{% render 'icon-glycerin' %}\n<h1>test<\/h1>"
           }
         }
       },
@@ -196,7 +196,7 @@
         "ed40a89a-805f-4822-a72d-51ed9ca555ea"
       ],
       "settings": {
-        "section_bg_color": "transparent",
+        "section_bg_color": "rgba(0,0,0,0)",
         "max_width": "",
         "section_x_padding": "",
         "section_y_margin": "",
