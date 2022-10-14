@@ -672,8 +672,20 @@ body.template-product .custom_icons {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 2rem;
+  gap: 3rem;
 }
 body.template-product .custom_icons .custom_icon {
-  flex: 25%;
+  flex:25%;
 }
+
+body.template-product .custom_icons .custom_icon .custom_icon--caption{
+  text-align:center;
+  margin-top:10px;
+}
+
+@media (max-width:768px){
+  body.template-product .custom_icons .custom_icon .custom_icon--caption{
+    font-size:10px;
+  }
+}
+
