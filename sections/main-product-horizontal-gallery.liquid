@@ -480,6 +480,9 @@
       {%- for block in section.blocks -%}
         {% if block.type == 'custom_images' %}
           <div class="block custom_icons">
+            {% if block.settings.img_1 %}
+              <img src="{{ block.settings.img_1.src }}" alt="" />
+            {% endif %}
             {{ block.settings.img_caption_1 }}
             {{ block.settings.img_caption_2 }}
           </div>
