@@ -188,20 +188,36 @@
           "type": "custom-html",
           "settings": {
             "title": "",
-            "custom_html": "{% render 'icon-glycerin' %}\n<h1>test<\/h1>"
+            "custom_html": "<div class=\"icon-caurnaba\">{% render 'icon-caurnaba' %}<\/div>"
+          }
+        },
+        "0b2009e6-69ee-400d-a62b-1198ca7b6b82": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "<div class\"icon-vitamin\">\n{% render 'icon-vitamin' %}\n<\/div>"
+          }
+        },
+        "e7af0ec2-a5b9-4dfc-b135-36c0a79dd163": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "<div class=\"glycerin-icon\">{% render 'icon-glycerin' %}\n<\/div>"
           }
         }
       },
       "block_order": [
-        "ed40a89a-805f-4822-a72d-51ed9ca555ea"
+        "ed40a89a-805f-4822-a72d-51ed9ca555ea",
+        "0b2009e6-69ee-400d-a62b-1198ca7b6b82",
+        "e7af0ec2-a5b9-4dfc-b135-36c0a79dd163"
       ],
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "max_width": "",
-        "section_x_padding": "",
-        "section_y_margin": "",
-        "col_widths": 2,
-        "col_gap": "",
+        "max_width": "max-w-xl",
+        "section_x_padding": "px-2",
+        "section_y_margin": "my-2",
+        "col_widths": 1,
+        "col_gap": "lg:gap-2",
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
