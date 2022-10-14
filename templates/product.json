@@ -1,1 +1,77 @@
-{"sections":{"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"option_style":"text_underline","hide_option_labels":false}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"enable_payment_button":true,"show_pickup_availability":false}},"description":{"type":"description","settings":{"enable_collapsible_tabs":false,"truncate_description":false}}},"block_order":["title","price","variant_picker","quantity_selector","buy_buttons","description"],"settings":{"desktop_image_width":"one-half","desktop_image_position":"left","two_images_per_row":false,"first_image_full_width":false,"variant_image_behaviour":"swap","enable_image_zoom":true,"enable_video_looping":false,"color_scheme":"primary","override_header_footer_color_scheme":false}},"marquee":{"type":"marquee","settings":{"text":"Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.","repeat_text":true,"link":"","text_size":"text-2xl lg:text-7xl","font":"heading","speed":150,"direction":"","color_scheme":"secondary"}},"product-recommendations":{"type":"product-recommendations","settings":{"show_product_recommendations":true,"product_recommendations_heading":"You may also like","limit":"4","products_per_row_desktop":"4","products_per_row_mobile":"1","color_scheme":"primary"}}},"order":["main","marquee","product-recommendations"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": { "type": "title", "settings": {} },
+        "price": { "type": "price", "settings": {} },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "quantity_selector": { "type": "quantity_selector", "settings": {} },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible_tabs": false,
+            "truncate_description": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description"
+      ],
+      "settings": {
+        "desktop_image_width": "one-half",
+        "desktop_image_position": "left",
+        "two_images_per_row": false,
+        "first_image_full_width": false,
+        "variant_image_behaviour": "swap",
+        "enable_image_zoom": true,
+        "enable_video_looping": false,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "marquee": {
+      "type": "marquee",
+      "settings": {
+        "text": "Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.",
+        "repeat_text": true,
+        "link": "",
+        "text_size": "text-2xl lg:text-7xl",
+        "font": "heading",
+        "speed": 150,
+        "direction": "",
+        "color_scheme": "secondary"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "limit": "4",
+        "products_per_row_desktop": "4",
+        "products_per_row_mobile": "1",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": ["main", "marquee", "product-recommendations"]
+}
