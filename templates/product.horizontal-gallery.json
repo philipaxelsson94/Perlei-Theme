@@ -181,6 +181,31 @@
         "color_scheme": "primary"
       }
     },
+    "630ed577-798e-47bc-800c-3f7ae4006561": {
+      "type": "columns-icons",
+      "blocks": {
+        "ed40a89a-805f-4822-a72d-51ed9ca555ea": {
+          "type": "custom-html",
+          "settings": {
+            "title": "",
+            "custom_html": "{% render 'resurs_20.svg' %}\n<h1> hej <\/h1>"
+          }
+        }
+      },
+      "block_order": [
+        "ed40a89a-805f-4822-a72d-51ed9ca555ea"
+      ],
+      "settings": {
+        "section_bg_color": "transparent",
+        "max_width": "",
+        "section_x_padding": "",
+        "section_y_margin": "",
+        "col_widths": 2,
+        "col_gap": "",
+        "reverse_col_order": false,
+        "v_align_items": "self-center"
+      }
+    },
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478": {
       "type": "logo-list",
       "blocks": {
@@ -277,6 +302,7 @@
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
     "1663159752996b81f6",
+    "630ed577-798e-47bc-800c-3f7ae4006561",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8"
   ]
