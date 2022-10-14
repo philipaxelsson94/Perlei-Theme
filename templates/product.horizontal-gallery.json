@@ -181,6 +181,61 @@
         "color_scheme": "primary"
       }
     },
+    "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478": {
+      "type": "logo-list",
+      "blocks": {
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/daisy-beauty-logo-blue-640wide.png",
+            "link": ""
+          }
+        },
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/styleby.png",
+            "link": ""
+          }
+        },
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle_logga.png",
+            "link": ""
+          }
+        },
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/damernas.png",
+            "link": ""
+          }
+        },
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aftonbladet-logo-black-and-white.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-0",
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-1",
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-2",
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-3",
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-4"
+      ],
+      "settings": {
+        "heading": "featured in",
+        "max_width": 150,
+        "section_padding_y": "py-2 lg:py-4",
+        "text_alignment": "center",
+        "logo_alignment": "center",
+        "color_scheme": "primary"
+      }
+    },
     "1643190266cb6795f8": {
       "type": "apps",
       "blocks": {
@@ -222,6 +277,7 @@
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
     "1663159752996b81f6",
+    "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8"
   ]
 }
