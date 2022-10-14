@@ -1,1 +1,75 @@
-{"sections":{"1643029404ffdbb9df":{"type":"image-with-text-overlay","settings":{"image":"shopify:\/\/shop_images\/PERLEI_AboutUs_d.jpg","indent_image":false,"height":"natural","max_height":"max-h-75vh","image_focal_point":"object-right","title":"About us","heading_size":"text-2xl lg:text-5xl","text":"<p>Swedish Beauty Innovation Made In Italy<\/p>","content_position":"justify-start items-center text-left","content_width_desktop":"lg:w-full","content_width_mobile":"w-1\/2","content_padding_desktop":"lg:px-8","text_color":"primary","background_color":"primary","cta_link":"","cta_text":"","cta_style":"link"}},"main":{"type":"main-page","settings":{"show_page_title":false,"content_width":"lg:w-2\/3","content_position":"lg:justify-center","color_scheme":"primary","override_header_footer_color_scheme":false}},"1643191818a8f38f4c":{"type":"apps","blocks":{"6bcc5c7a-b23e-47a5-901a-0918fb8224dd":{"type":"shopify:\/\/apps\/section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2","settings":{"title":"Per Lei on Instagram","subheading":"<p>Follow our journey!<\/p>","button_text":"Follow us","button_link":"https:\/\/www.instagram.com\/perleisweden\/","layout":"grid","image_size":"small","add_spacing":false,"rows_count":2,"show_author":false,"show_caption":true,"show_date":true,"click_action":"open_instagram","heading_color":"#000000","subheading_color":"#000000","button_background":"#000000","button_color":"#ffffff","overlay_color":"#000000","overlay_text_color":"#ffffff","overlay_opacity":50}}},"block_order":["6bcc5c7a-b23e-47a5-901a-0918fb8224dd"],"settings":{}}},"order":["1643029404ffdbb9df","main","1643191818a8f38f4c"]}
+{
+  "sections": {
+    "1643029404ffdbb9df": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/PERLEI_AboutUs_d.jpg",
+        "indent_image": false,
+        "height": "natural",
+        "max_height": "max-h-75vh",
+        "image_focal_point": "object-right",
+        "title": "About us",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "<p>Swedish Beauty Innovation Made In Italy<\/p>",
+        "content_position": "justify-start items-center text-left",
+        "content_width_desktop": "lg:w-full",
+        "content_width_mobile": "w-1\/2",
+        "content_padding_desktop": "lg:px-8",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_page_title": false,
+        "content_width": "lg:w-2\/3",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1643191818a8f38f4c": {
+      "type": "apps",
+      "blocks": {
+        "6bcc5c7a-b23e-47a5-901a-0918fb8224dd": {
+          "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+          "settings": {
+            "title": "Per Lei on Instagram",
+            "subheading": "<p>Follow our journey!<\/p>",
+            "button_text": "Follow us",
+            "button_link": "https:\/\/www.instagram.com\/perleisweden\/",
+            "layout": "grid",
+            "image_size": "small",
+            "add_spacing": false,
+            "rows_count": 2,
+            "show_author": false,
+            "show_caption": true,
+            "show_date": true,
+            "click_action": "open_instagram",
+            "heading_color": "#000000",
+            "subheading_color": "#000000",
+            "button_background": "#000000",
+            "button_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "overlay_opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "6bcc5c7a-b23e-47a5-901a-0918fb8224dd"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1643029404ffdbb9df",
+    "main",
+    "1643191818a8f38f4c"
+  ]
+}
