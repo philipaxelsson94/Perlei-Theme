@@ -54,13 +54,13 @@
           "type": "custom_images",
           "settings": {
             "img_1": "shopify:\/\/shop_images\/fast.png",
-            "img_caption_1": "Image caption",
+            "img_caption_1": "Fast Delivery",
             "img_2": "shopify:\/\/shop_images\/fast.png",
-            "img_caption_2": "Image caption",
+            "img_caption_2": "Pay easily with Klarna",
             "img_3": "shopify:\/\/shop_images\/klarna-logo.png",
-            "img_caption_3": "Image caption",
+            "img_caption_3": "Vegan",
             "img_4": "shopify:\/\/shop_images\/diet.png",
-            "img_caption_4": "Image caption"
+            "img_caption_4": "Revolutionary formula"
           }
         }
       },
