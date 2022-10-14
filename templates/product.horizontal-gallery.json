@@ -31,9 +31,9 @@
           "type": "text",
           "settings": {
             "position": "product_description",
-            "text": "\"Citat\"",
-            "font": "body",
-            "text_size": "text-base",
+            "text": "{{ product.metafields.custom.product_quote.value }}",
+            "font": "heading",
+            "text_size": "text-base lg:text-xl",
             "icon": "none"
           }
         },
