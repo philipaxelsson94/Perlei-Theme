@@ -106,7 +106,7 @@
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
         {%- assign tab_counter = 0 -%}
         {%- for block in section.blocks -%}
-        {% assign supported_blocks = 'title, vendor, price, variant_picker, quantity_selector, buy_buttons' %}
+        {% assign supported_blocks = 'title, vendor, price, variant_picker, quantity_selector, buy_buttons, custom_images' %}
         {%- if block.settings.position == 'product_form' or supported_blocks contains block.type or block.type == '@app' -%}
         {%- case block.type -%}
         {%- when '@app' -%}
