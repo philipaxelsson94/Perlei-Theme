@@ -49,6 +49,19 @@
           "settings": {
             "position": "product_extra"
           }
+        },
+        "39179b48-96d5-497a-956b-431516e7a4b6": {
+          "type": "custom_images",
+          "settings": {
+            "img_1": "shopify:\/\/shop_images\/fast.png",
+            "img_caption_1": "Fast Delivery",
+            "img_2": "shopify:\/\/shop_images\/klarna-logo.png",
+            "img_caption_2": "Pay easily with Klarna",
+            "img_3": "shopify:\/\/shop_images\/leaf.png",
+            "img_caption_3": "Vegan",
+            "img_4": "shopify:\/\/shop_images\/diet.png",
+            "img_caption_4": "Revolutionary formula"
+          }
         }
       },
       "block_order": [
@@ -58,7 +71,8 @@
         "buy_buttons",
         "cae47670-a0f1-4365-afee-838bf02c5a7f",
         "description",
-        "share_buttons"
+        "share_buttons",
+        "39179b48-96d5-497a-956b-431516e7a4b6"
       ],
       "settings": {
         "desktop_image_height": 50,
