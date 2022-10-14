@@ -471,6 +471,9 @@
         <div class="mt-8" {{ block.shopify_attributes }}>
           {% render 'social-sharing', tag: 'h2', share_title: product.title, share_permalink: product.url, share_image: product, section_color: section_color %}
         </div>
+          {%- when 'custom_images' -%}
+            {{ block.settings.img_caption_1 }}
+            {{ block.settings.img_caption_2 }}
         {%- endcase -%}
         {%- endif -%}
         {%- endfor -%}
