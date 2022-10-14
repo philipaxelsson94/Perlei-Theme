@@ -53,10 +53,14 @@
         "39179b48-96d5-497a-956b-431516e7a4b6": {
           "type": "custom_images",
           "settings": {
-            "img_1": "shopify:\/\/shop_images\/leaf.png",
+            "img_1": "shopify:\/\/shop_images\/fast.png",
             "img_caption_1": "Image caption",
             "img_2": "shopify:\/\/shop_images\/fast.png",
-            "img_caption_2": "Image caption"
+            "img_caption_2": "Image caption",
+            "img_3": "shopify:\/\/shop_images\/klarna-logo.png",
+            "img_caption_3": "Image caption",
+            "img_4": "shopify:\/\/shop_images\/diet.png",
+            "img_caption_4": "Image caption"
           }
         }
       },
