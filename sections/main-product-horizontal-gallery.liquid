@@ -481,10 +481,29 @@
         {% if block.type == 'custom_images' %}
           <div class="block custom_icons">
             {% if block.settings.img_1 %}
-              {% render 'responsive-image' with image: block.settings.img_1 %}
+              <div class="custom_icon">
+                {% render 'responsive-image' with image: block.settings.img_1 %}
+                {{ block.settings.img_caption_1 }}
+              </div>
             {% endif %}
-            {{ block.settings.img_caption_1 }}
-            {{ block.settings.img_caption_2 }}
+          {% if block.settings.img_1 %}
+              <div class="custom_icon">
+                {% render 'responsive-image' with image: block.settings.img_1 %}
+                {{ block.settings.img_caption_1 }}
+              </div>
+            {% endif %}
+          {% if block.settings.img_1 %}
+              <div class="custom_icon">
+                {% render 'responsive-image' with image: block.settings.img_1 %}
+                {{ block.settings.img_caption_1 }}
+              </div>
+            {% endif %}
+          {% if block.settings.img_1 %}
+              <div class="custom_icon">
+                {% render 'responsive-image' with image: block.settings.img_1 %}
+                {{ block.settings.img_caption_1 }}
+              </div>
+            {% endif %}
           </div>
         {% endif %}
       {%- endfor -%}
