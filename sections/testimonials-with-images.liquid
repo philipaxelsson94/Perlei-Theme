@@ -25,17 +25,26 @@
   
     <div class="section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }} gap-10">
       {%-for block in section.blocks -%}
-
-
-
-      <blockquote class="flex-1 {{ section.settings.text_align }}">
-        <div class="font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
-        {{ block.settings.quote }}
-        </div>
-        {% if block.settings.source != blank %}
-          <footer class="mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
-        {% endif %}
-      </blockquote>
+      {%- if block.settings.show_image -%}
+          {%- if block.settings.image != blank -%}
+        
+            <div class="block lg:hidden w-full h-full relative">
+            {%- assign image = block.settings.image -%}
+              {% render 'image-crop' with
+                image: image
+              %}
+            </div>
+            {%- endif -%}
+        {%- endif- %}
+            <blockquote class="flex-1 {{ section.settings.text_align }}">
+                <div class="font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
+                {{ block.settings.quote }}
+                </div>
+                {% if block.settings.source != blank %}
+                    <footer class="mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
+                {% endif %}
+            </blockquote>
+         
       {%- endfor -%}
     </div>
   </section>
@@ -49,6 +58,30 @@
           "type": "text",
           "label": "Heading"
         },
+        {
+            "type": "select",
+            "id": "crop",
+            "label": "Crop images",
+            "options": [
+              {
+                "value": "0",
+                "label": "No crop"
+              },
+              {
+                "value": "1.3",
+                "label": "Landscape"
+              },
+              {
+                "value": "1",
+                "label": "Square"
+              },
+              {
+                "value": "0.8",
+                "label": "Portrait"
+              }
+            ],
+            "default": "1"
+          },
         {
           "type": "select",
           "id": "text_style",
@@ -151,9 +184,6 @@
         {
           "name": "Testimonials with images",
           "blocks": [
-            {
-              "type": "testimonial"
-            },
             {
               "type": "testimonial"
             },
