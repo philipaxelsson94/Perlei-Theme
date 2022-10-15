@@ -181,6 +181,28 @@
         "color_scheme": "primary"
       }
     },
+    "f9fc9028-5711-4e9c-bebe-e03a993d6d45": {
+      "type": "rich-text",
+      "settings": {
+        "section_bg_color": "transparent",
+        "padding_top": "",
+        "margin_bottom": "",
+        "padding_x": "",
+        "title": "The secret ingredients in our kick-ass formula",
+        "text": "",
+        "text_size_mobile": "text-lg",
+        "text_size_desktop": "lg:text-5xl",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_margin_top": "mt-2 lg:mt-4",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "color_scheme": "primary"
+      }
+    },
     "630ed577-798e-47bc-800c-3f7ae4006561": {
       "type": "columns-icons",
       "blocks": {
@@ -213,13 +235,35 @@
       ],
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "max_width": "max-w-xl",
+        "max_width": "max-w-3xl",
         "section_x_padding": "px-2",
         "section_y_margin": "my-2",
-        "col_widths": 1,
-        "col_gap": "lg:gap-2",
+        "col_widths": 2,
+        "col_gap": "gap-6 lg:gap-10",
         "reverse_col_order": false,
         "v_align_items": "self-center"
+      }
+    },
+    "0c2af7db-21f0-4ec7-905d-62281a4ccfe9": {
+      "type": "rich-text",
+      "settings": {
+        "section_bg_color": "transparent",
+        "padding_top": "pt-2 lg:pt-4",
+        "margin_bottom": "mb-2 lg:mb-4",
+        "padding_x": "px-2 lg:px-4",
+        "title": "",
+        "text": "<p>Per Lei’s Brow Lift is a revolutionary eyebrow wax perfect for both shaping and defining your eyebrows according to your exact wishes. It has a unique tapered comb with a flat back for an easy application. The formula is a mixture of strengthening and caring ingredients and works even on the thickest and most difficult brow hairs that otherwise are difficult to tame. At first, the formula is white but quickly becomes transparent when you work on the product.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "lg:text-xl",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_margin_top": "mt-2 lg:mt-4",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "color_scheme": "primary"
       }
     },
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478": {
@@ -318,7 +362,9 @@
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
     "1663159752996b81f6",
+    "f9fc9028-5711-4e9c-bebe-e03a993d6d45",
     "630ed577-798e-47bc-800c-3f7ae4006561",
+    "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8"
   ]
