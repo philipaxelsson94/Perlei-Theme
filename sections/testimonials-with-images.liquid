@@ -25,6 +25,9 @@
   
     <div class="section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }} gap-10">
       {%-for block in section.blocks -%}
+
+
+
       <blockquote class="flex-1 {{ section.settings.text_align }}">
         <div class="font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
         {{ block.settings.quote }}
@@ -116,7 +119,19 @@
         {
           "type": "testimonial",
           "name": "Testimonial",
+          "limit": 2,
           "settings": [
+            {
+                "type": "checkbox",
+                "id": "show_image",
+                "label": "Show image",
+                "default": true
+            },
+            {
+                "id": "image",
+                "type": "image_picker",
+                "label": "Image"
+            },
             {
               "type": "richtext",
               "id": "quote",
