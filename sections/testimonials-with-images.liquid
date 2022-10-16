@@ -1,3 +1,4 @@
+{%comment%}
 {%- liquid
     assign section_color = section.settings.color_scheme
     assign divisible_by_four =  section.blocks.size | modulo: 4
@@ -12,8 +13,9 @@
       assign grid_class = 'lg:grid-cols-2'
     else
       assign grid_class = 'lg:grid-cols-3'
-    endif
+    endif 
   -%}
+  {%endcomment%}
   
   <section class="border-t-grid border-grid-color bg-border">
     {% if section.settings.heading != '' %}
