@@ -5,7 +5,7 @@
     assign divisible_by_two =  section.blocks.size | modulo: 2
   
     if divisible_by_four == 0
-      assign grid_class = 'lg:grid-cols-4'
+      assign grid_class = 'lg:grid-cols-2'
     elsif divisible_by_three == 0
       assign grid_class = 'lg:grid-cols-3'
     elsif divisible_by_two == 0
@@ -106,6 +106,7 @@
             { "value": "text-lg", "label": "L"},
             { "value": "text-xl", "label": "XL"},
             { "value": "text-2xl", "label": "2XL"},
+            { "value": "text-base lg:text-xl", "label": "S / desktop XL"},
             { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
             { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
             { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL" },
