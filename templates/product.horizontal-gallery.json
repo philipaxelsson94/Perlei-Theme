@@ -385,7 +385,7 @@
         "heading": "",
         "crop": "0",
         "text_style": "heading",
-        "text_size": "text-base",
+        "text_size": "text-base lg:text-2xl",
         "text_align": "text-center",
         "color_scheme": "primary"
       }
