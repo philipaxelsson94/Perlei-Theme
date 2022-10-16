@@ -24,29 +24,27 @@
     {% endif %}
   
     <div class="section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }} gap-10">
-      {%-for block in section.blocks -%}
-      {%- if block.settings.show_image -%}
-          {%- if block.settings.image != blank -%}
-        
-            <div class="block lg:hidden w-full h-full relative">
-            {%- assign image = block.settings.image -%}
-              {% render 'image-crop' with
-                image: image
-              %}
+        <div class="grid grid-cols-2 gap-4">
+
+        {%-for block in section.blocks -%}
+            <div>
+            {%- if block.settings.show_image -%}
+                {%- if block.settings.image != blank -%}
+                    <img src="{{block.settings.image |  img_url: 'master'}}" alt="beforeafter">
+                {%- endif -%}
+            {%- endif- %}
+                <blockquote class="flex-1 {{ section.settings.text_align }}">
+                    <div class="font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
+                        {{ block.settings.quote }}
+                    </div>
+                    {% if block.settings.source != blank %}
+                        <footer class="mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
+                    {% endif %}
+                </blockquote>
             </div>
-            {%- endif -%}
-        {%- endif- %}
-            <blockquote class="flex-1 {{ section.settings.text_align }}">
-                <div class="font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
-                {{ block.settings.quote }}
-                </div>
-                {% if block.settings.source != blank %}
-                    <footer class="mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
-                {% endif %}
-            </blockquote>
-         
-      {%- endfor -%}
-    </div>
+        {%- endfor -%}
+        </div>
+        </div>
   </section>
   
   {% schema %}
@@ -161,8 +159,8 @@
                 "default": true
             },
             {
-                "id": "image",
                 "type": "image_picker",
+                "id": "image",
                 "label": "Image"
             },
             {
