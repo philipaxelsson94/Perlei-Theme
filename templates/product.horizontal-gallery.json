@@ -355,25 +355,18 @@
       "settings": {
       }
     },
-    "3f5e57f7-92cb-45dc-a8fc-7d2ca94f5e6d": {
+    "2071783a-38ca-485f-8e98-4c9f3e4716ac": {
       "type": "columns",
       "blocks": {
-        "b3b0171a-5ef0-4166-9424-f4d81d98bbc6": {
+        "75c6e713-edf9-423f-aa76-ebe8eca64905": {
           "type": "page-block",
           "settings": {
-            "page": ""
-          }
-        },
-        "a7b75b49-7cf1-4b9c-ae7c-423c2da9d08c": {
-          "type": "page-block",
-          "settings": {
-            "page": ""
+            "page": "{{ product.metafields.custom.quotes_with_image_2.value }}"
           }
         }
       },
       "block_order": [
-        "b3b0171a-5ef0-4166-9424-f4d81d98bbc6",
-        "a7b75b49-7cf1-4b9c-ae7c-423c2da9d08c"
+        "75c6e713-edf9-423f-aa76-ebe8eca64905"
       ],
       "settings": {
         "section_bg_color": "transparent",
@@ -398,6 +391,6 @@
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
-    "3f5e57f7-92cb-45dc-a8fc-7d2ca94f5e6d"
+    "2071783a-38ca-485f-8e98-4c9f3e4716ac"
   ]
 }
