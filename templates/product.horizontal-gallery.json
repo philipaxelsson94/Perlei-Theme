@@ -407,7 +407,7 @@
         "87bd856d-cfa2-4d92-92bd-31825d6e3379"
       ],
       "settings": {
-        "section_bg_color": "transparent",
+        "section_bg_color": "rgba(0,0,0,0)",
         "max_width": "",
         "section_x_padding": "px-4",
         "section_y_margin": "my-4",
@@ -415,6 +415,28 @@
         "col_gap": "gap-2 lg:gap-6",
         "reverse_col_order": false,
         "v_align_items": "self-center"
+      }
+    },
+    "e86e6ee4-226f-4a93-b5e3-17b6d18922f8": {
+      "type": "rich-text",
+      "settings": {
+        "section_bg_color": "transparent",
+        "padding_top": "",
+        "margin_bottom": "",
+        "padding_x": "",
+        "title": "{{ product.metafields.custom.quote_section_heading.value }}",
+        "text": "",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "lg:text-2xl",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_margin_top": "mt-2 lg:mt-4",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "color_scheme": "primary"
       }
     }
   },
@@ -430,6 +452,7 @@
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
     "7aff0c9a-f8d9-4145-8c99-d6bf51fe795f",
-    "60345b1a-4d35-4df5-9e90-4291b1d103e3"
+    "60345b1a-4d35-4df5-9e90-4291b1d103e3",
+    "e86e6ee4-226f-4a93-b5e3-17b6d18922f8"
   ]
 }
