@@ -385,6 +385,37 @@
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
+    },
+    "34ed85e1-cceb-448f-89ac-8f1e57d83691": {
+      "type": "columns",
+      "blocks": {
+        "89d5edfc-b65c-4b7a-9e23-b9357cecb6a7": {
+          "type": "page-block",
+          "settings": {
+            "page": ""
+          }
+        },
+        "d389fc3d-25aa-4cb2-abb1-eb92325611f8": {
+          "type": "page-block",
+          "settings": {
+            "page": "{{ product.metafields.custom.quotes_with_images_4.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "89d5edfc-b65c-4b7a-9e23-b9357cecb6a7",
+        "d389fc3d-25aa-4cb2-abb1-eb92325611f8"
+      ],
+      "settings": {
+        "section_bg_color": "transparent",
+        "max_width": "",
+        "section_x_padding": "",
+        "section_y_margin": "",
+        "col_widths": 2,
+        "col_gap": "",
+        "reverse_col_order": false,
+        "v_align_items": "self-center"
+      }
     }
   },
   "order": [
@@ -398,6 +429,7 @@
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
-    "2071783a-38ca-485f-8e98-4c9f3e4716ac"
+    "2071783a-38ca-485f-8e98-4c9f3e4716ac",
+    "34ed85e1-cceb-448f-89ac-8f1e57d83691"
   ]
 }
