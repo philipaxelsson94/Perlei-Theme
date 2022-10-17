@@ -355,39 +355,35 @@
       "settings": {
       }
     },
-    "a7a236d9-cb1a-4db5-88c6-1423e4abf3a0": {
-      "type": "testimonials-with-images",
+    "3f5e57f7-92cb-45dc-a8fc-7d2ca94f5e6d": {
+      "type": "columns",
       "blocks": {
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-0": {
-          "type": "testimonial",
+        "b3b0171a-5ef0-4166-9424-f4d81d98bbc6": {
+          "type": "page-block",
           "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/rita_1.jpg",
-            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
-            "source": "Source"
+            "page": ""
           }
         },
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-1": {
-          "type": "testimonial",
+        "a7b75b49-7cf1-4b9c-ae7c-423c2da9d08c": {
+          "type": "page-block",
           "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/Hannah_1.jpg",
-            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
-            "source": "Source"
+            "page": ""
           }
         }
       },
       "block_order": [
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-0",
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-1"
+        "b3b0171a-5ef0-4166-9424-f4d81d98bbc6",
+        "a7b75b49-7cf1-4b9c-ae7c-423c2da9d08c"
       ],
       "settings": {
-        "heading": "",
-        "crop": "0",
-        "text_style": "heading",
-        "text_size": "text-base lg:text-2xl",
-        "text_align": "text-center",
-        "color_scheme": "primary"
+        "section_bg_color": "transparent",
+        "max_width": "",
+        "section_x_padding": "",
+        "section_y_margin": "",
+        "col_widths": 2,
+        "col_gap": "",
+        "reverse_col_order": false,
+        "v_align_items": "self-center"
       }
     }
   },
@@ -402,6 +398,6 @@
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
-    "a7a236d9-cb1a-4db5-88c6-1423e4abf3a0"
+    "3f5e57f7-92cb-45dc-a8fc-7d2ca94f5e6d"
   ]
 }
