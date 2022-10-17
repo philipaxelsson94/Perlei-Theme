@@ -398,13 +398,20 @@
           "settings": {
             "page": "{{ product.metafields.custom.quotes_with_images.value }}"
           }
+        },
+        "8d9c5aa4-8f91-422f-a576-fdd9b5c27421": {
+          "type": "page-block",
+          "settings": {
+            "page": "{{ product.metafields.custom.quotes_with_image_2.value }}"
+          }
         }
       },
       "block_order": [
-        "3a8a88aa-ec5e-437b-b3e5-c10e9e111d37"
+        "3a8a88aa-ec5e-437b-b3e5-c10e9e111d37",
+        "8d9c5aa4-8f91-422f-a576-fdd9b5c27421"
       ],
       "settings": {
-        "section_bg_color": "transparent",
+        "section_bg_color": "rgba(0,0,0,0)",
         "max_width": "",
         "section_x_padding": "",
         "section_y_margin": "",
