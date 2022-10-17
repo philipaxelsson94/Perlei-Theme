@@ -355,41 +355,6 @@
       "settings": {
       }
     },
-    "a7a236d9-cb1a-4db5-88c6-1423e4abf3a0": {
-      "type": "testimonials-with-images",
-      "blocks": {
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-0": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/rita_1.jpg",
-            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
-            "source": "Source"
-          }
-        },
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-1": {
-          "type": "testimonial",
-          "settings": {
-            "show_image": true,
-            "image": "shopify:\/\/shop_images\/Hannah_1.jpg",
-            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
-            "source": "Source"
-          }
-        }
-      },
-      "block_order": [
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-0",
-        "template--16096415416469__a7a236d9-cb1a-4db5-88c6-1423e4abf3a0-1665947118575a537f-1"
-      ],
-      "settings": {
-        "heading": "",
-        "crop": "0",
-        "text_style": "heading",
-        "text_size": "text-base lg:text-2xl",
-        "text_align": "text-center",
-        "color_scheme": "primary"
-      }
-    },
     "7aff0c9a-f8d9-4145-8c99-d6bf51fe795f": {
       "type": "columns",
       "blocks": {
@@ -413,10 +378,10 @@
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
         "max_width": "",
-        "section_x_padding": "",
-        "section_y_margin": "",
+        "section_x_padding": "px-4",
+        "section_y_margin": "my-8",
         "col_widths": 2,
-        "col_gap": "",
+        "col_gap": "gap-2 lg:gap-6",
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
@@ -464,7 +429,6 @@
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
-    "a7a236d9-cb1a-4db5-88c6-1423e4abf3a0",
     "7aff0c9a-f8d9-4145-8c99-d6bf51fe795f",
     "60345b1a-4d35-4df5-9e90-4291b1d103e3"
   ]
