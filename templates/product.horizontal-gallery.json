@@ -409,10 +409,10 @@
       "settings": {
         "section_bg_color": "transparent",
         "max_width": "",
-        "section_x_padding": "",
-        "section_y_margin": "",
+        "section_x_padding": "px-4",
+        "section_y_margin": "my-4",
         "col_widths": 2,
-        "col_gap": "",
+        "col_gap": "gap-2 lg:gap-6",
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
