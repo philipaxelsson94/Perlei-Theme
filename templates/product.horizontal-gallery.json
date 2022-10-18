@@ -89,6 +89,7 @@
       "type": "image-with-text-overlay",
       "settings": {
         "image": "shopify:\/\/shop_images\/per_lei__lift_clear.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/per_lei_mobil_view_720_70864604-87b4-4118-a317-e6a0a5a55e5b.png",
         "indent_image": false,
         "height": "natural",
         "max_height": "",
@@ -438,6 +439,101 @@
       ],
       "settings": {
       }
+    },
+    "ccdface6-da18-477b-bb73-43ff8d9049cd": {
+      "type": "columns-icons",
+      "blocks": {
+        "2e3bbd58-43f6-4275-98e7-27ca5c04a5ec": {
+          "type": "image-with-text",
+          "settings": {
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "shopify:\/\/shop_images\/resurs2.jpg",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-left",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "7e49d693-8853-45a8-8938-5bed53306c67": {
+          "type": "image-with-text",
+          "settings": {
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "shopify:\/\/shop_images\/resurs3.jpg",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-left",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        },
+        "ca589f05-6a59-4097-9d3f-d8f3674dba13": {
+          "type": "image-with-text",
+          "settings": {
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "shopify:\/\/shop_images\/resurs1.jpg",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-left",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "2e3bbd58-43f6-4275-98e7-27ca5c04a5ec",
+        "7e49d693-8853-45a8-8938-5bed53306c67",
+        "ca589f05-6a59-4097-9d3f-d8f3674dba13"
+      ],
+      "settings": {
+        "section_bg_color": "transparent",
+        "max_width": "",
+        "section_x_padding": "px-8",
+        "section_y_margin": "my-8",
+        "col_widths": 2,
+        "col_gap": "gap-6 lg:gap-10",
+        "reverse_col_order": false,
+        "v_align_items": "self-center"
+      }
     }
   },
   "order": [
@@ -453,6 +549,7 @@
     "7aff0c9a-f8d9-4145-8c99-d6bf51fe795f",
     "60345b1a-4d35-4df5-9e90-4291b1d103e3",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
-    "1643190266cb6795f8"
+    "1643190266cb6795f8",
+    "ccdface6-da18-477b-bb73-43ff8d9049cd"
   ]
 }
