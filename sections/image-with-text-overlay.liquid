@@ -20,7 +20,7 @@
 -%}
 
 <section>
-
+  {% if section.settings.image != blank %}
   {%- render 'image-with-text-overlay',
     height: height,
   	max_height: max_height,
@@ -41,6 +41,7 @@
     cta_text: cta_text,
     cta_style: cta_style
   -%}
+  {% endif %}
 </section>
 
 {% schema %}
