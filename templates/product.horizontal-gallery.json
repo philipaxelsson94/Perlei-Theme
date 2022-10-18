@@ -236,8 +236,8 @@
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
         "max_width": "max-w-3xl",
-        "section_x_padding": "px-2",
-        "section_y_margin": "my-2",
+        "section_x_padding": "px-8",
+        "section_y_margin": "my-8",
         "col_widths": 2,
         "col_gap": "gap-6 lg:gap-10",
         "reverse_col_order": false,
