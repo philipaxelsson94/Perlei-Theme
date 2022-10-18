@@ -88,8 +88,8 @@
     "be69bfa5-727d-416a-ac4f-5dedddbe6a4d": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify:\/\/shop_images\/per_lei__lift_clear.jpg",
-        "image_mobile": "shopify:\/\/shop_images\/per_lei_mobil_view_720_70864604-87b4-4118-a317-e6a0a5a55e5b.png",
+        "image": "{{ product.metafields.custom.product_banner_desktop_1800x800.value }}",
+        "image_mobile": "{{ product.metafields.custom.product_banner_mobile_800x1200.value }}",
         "indent_image": false,
         "height": "natural",
         "max_height": "",
@@ -204,43 +204,97 @@
         "color_scheme": "primary"
       }
     },
-    "630ed577-798e-47bc-800c-3f7ae4006561": {
-      "type": "columns-icons",
+    "8e51457f-2e2c-46c6-bceb-19fe2802ad00": {
+      "type": "columns-icons-green",
       "blocks": {
-        "ed40a89a-805f-4822-a72d-51ed9ca555ea": {
-          "type": "custom-html",
+        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f": {
+          "type": "image-with-text",
           "settings": {
-            "title": "",
-            "custom_html": "<div class=\"icon-caurnaba\">{% render 'icon-caurnaba' %}<\/div>"
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "{{ product.metafields.custom.green_icon_image_1.value }}",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "Caurnaba Wax",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-center",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
           }
         },
-        "0b2009e6-69ee-400d-a62b-1198ca7b6b82": {
-          "type": "custom-html",
+        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f": {
+          "type": "image-with-text",
           "settings": {
-            "title": "",
-            "custom_html": "<div class\"icon-vitamin\">\n{% render 'icon-vitamin' %}\n<\/div>"
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "{{ product.metafields.custom.green_icon_image_2.value }}",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "Vitamin B",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-center",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
           }
         },
-        "e7af0ec2-a5b9-4dfc-b135-36c0a79dd163": {
-          "type": "custom-html",
+        "d5a428da-9356-4d7f-b659-cb71f23ee1be": {
+          "type": "image-with-text",
           "settings": {
-            "title": "",
-            "custom_html": "<div class=\"glycerin-icon\">{% render 'icon-glycerin' %}\n<\/div>"
+            "col_padding_y": "",
+            "col_padding_x": "",
+            "image_stretch": false,
+            "min_height": "natural",
+            "image": "{{ product.metafields.custom.green_icon_image_3.value }}",
+            "image_link": false,
+            "indent_image": false,
+            "background_color": "primary",
+            "title": "Glycerin",
+            "heading_size": "text-lg",
+            "heading_uppercase": false,
+            "heading_link": false,
+            "richtext": "",
+            "text_size": "text-base",
+            "font": "body",
+            "text_alignment": "text-center",
+            "color_scheme": "primary",
+            "cta_link": "",
+            "cta_text": "",
+            "cta_style": "link"
           }
         }
       },
       "block_order": [
-        "ed40a89a-805f-4822-a72d-51ed9ca555ea",
-        "0b2009e6-69ee-400d-a62b-1198ca7b6b82",
-        "e7af0ec2-a5b9-4dfc-b135-36c0a79dd163"
+        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f",
+        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f",
+        "d5a428da-9356-4d7f-b659-cb71f23ee1be"
       ],
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "max_width": "max-w-3xl",
-        "section_x_padding": "px-8",
-        "section_y_margin": "my-8",
+        "max_width": "",
+        "section_x_padding": "px-4",
+        "section_y_margin": "my-4",
         "col_widths": 2,
-        "col_gap": "gap-6 lg:gap-10",
+        "col_gap": "",
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
@@ -439,101 +493,6 @@
       ],
       "settings": {
       }
-    },
-    "8e51457f-2e2c-46c6-bceb-19fe2802ad00": {
-      "type": "columns-icons-green",
-      "blocks": {
-        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f": {
-          "type": "image-with-text",
-          "settings": {
-            "col_padding_y": "py-6 lg:py-12",
-            "col_padding_x": "px-6 lg:px-12",
-            "image_stretch": false,
-            "min_height": "natural",
-            "image": "shopify:\/\/shop_images\/resurs2.jpg",
-            "image_link": false,
-            "indent_image": false,
-            "background_color": "primary",
-            "title": "Caurnaba Wax",
-            "heading_size": "text-lg",
-            "heading_uppercase": false,
-            "heading_link": false,
-            "richtext": "",
-            "text_size": "text-base",
-            "font": "body",
-            "text_alignment": "text-center",
-            "color_scheme": "primary",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link"
-          }
-        },
-        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f": {
-          "type": "image-with-text",
-          "settings": {
-            "col_padding_y": "py-6 lg:py-12",
-            "col_padding_x": "px-6 lg:px-12",
-            "image_stretch": false,
-            "min_height": "natural",
-            "image": "shopify:\/\/shop_images\/resurs3.jpg",
-            "image_link": false,
-            "indent_image": false,
-            "background_color": "primary",
-            "title": "Vitamin B",
-            "heading_size": "text-lg",
-            "heading_uppercase": false,
-            "heading_link": false,
-            "richtext": "",
-            "text_size": "text-base",
-            "font": "body",
-            "text_alignment": "text-center",
-            "color_scheme": "primary",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link"
-          }
-        },
-        "d5a428da-9356-4d7f-b659-cb71f23ee1be": {
-          "type": "image-with-text",
-          "settings": {
-            "col_padding_y": "py-6 lg:py-12",
-            "col_padding_x": "px-6 lg:px-12",
-            "image_stretch": false,
-            "min_height": "natural",
-            "image": "shopify:\/\/shop_images\/resurs1.jpg",
-            "image_link": false,
-            "indent_image": false,
-            "background_color": "primary",
-            "title": "Glycerin",
-            "heading_size": "text-lg",
-            "heading_uppercase": false,
-            "heading_link": false,
-            "richtext": "",
-            "text_size": "text-base",
-            "font": "body",
-            "text_alignment": "text-center",
-            "color_scheme": "primary",
-            "cta_link": "",
-            "cta_text": "",
-            "cta_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f",
-        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f",
-        "d5a428da-9356-4d7f-b659-cb71f23ee1be"
-      ],
-      "settings": {
-        "section_bg_color": "rgba(0,0,0,0)",
-        "max_width": "",
-        "section_x_padding": "px-4",
-        "section_y_margin": "my-4",
-        "col_widths": 2,
-        "col_gap": "",
-        "reverse_col_order": false,
-        "v_align_items": "self-center"
-      }
     }
   },
   "order": [
@@ -543,13 +502,12 @@
     "product-recommendations",
     "1663159752996b81f6",
     "f9fc9028-5711-4e9c-bebe-e03a993d6d45",
-    "630ed577-798e-47bc-800c-3f7ae4006561",
+    "8e51457f-2e2c-46c6-bceb-19fe2802ad00",
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
     "e86e6ee4-226f-4a93-b5e3-17b6d18922f8",
     "7aff0c9a-f8d9-4145-8c99-d6bf51fe795f",
     "60345b1a-4d35-4df5-9e90-4291b1d103e3",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
-    "1643190266cb6795f8",
-    "8e51457f-2e2c-46c6-bceb-19fe2802ad00"
+    "1643190266cb6795f8"
   ]
 }
