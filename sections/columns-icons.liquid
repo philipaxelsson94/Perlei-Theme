@@ -10,11 +10,11 @@
   -%}
   
   <div class="w-100" style="background-color: {{ section_bg_color }};">
-    <div class="flex flex-wrap lg:flex-nowrap {% if max_width != '' %}{{ max_width }} mx-auto{% endif %} {{ section_x_padding }} {{ section_y_margin }} {{ col_gap }} {% if reverse_col_order %}flex-col-reverse lg:flex-row{% endif %}">
+    <div class="columns-icons flex flex-wrap lg:flex-nowrap {% if max_width != '' %}{{ max_width }} mx-auto{% endif %} {{ section_x_padding }} {{ section_y_margin }}  {% if reverse_col_order %}flex-col-reverse lg:flex-row{% endif %}">
   
       {% for block in section.blocks %}
   
-      <div class="column {% if block.type == 'image-with-text' %}self-stretch{% else %}{{ v_align_items }}{% endif %} w-full {{ col_padding_x }} {{ col_padding_y }} {% if col_widths == 1 %}{% if forloop.index0 == 0 %}lg:w-1/3{% else %}lg:w-2/3{% endif %}{% elsif col_widths == 3 %}{% if forloop.index0 == 0 %}lg:w-2/3{% else %}lg:w-1/3{% endif %}{% else %}lg:w-1/2{% endif %}">
+      <div class="column-icon {% if block.type == 'image-with-text' %}self-stretch{% else %}{{ v_align_items }}{% endif %} w-full {{ col_padding_x }} {{ col_padding_y }} {% if col_widths == 1 %}{% if forloop.index0 == 0 %}lg:w-1/3{% else %}lg:w-2/3{% endif %}{% elsif col_widths == 3 %}{% if forloop.index0 == 0 %}lg:w-2/3{% else %}lg:w-1/3{% endif %}{% else %}lg:w-1/2{% endif %}">
   
         {% case block.type %}
         {% when 'image-with-text' %}
