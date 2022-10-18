@@ -498,7 +498,7 @@
             {% endif %}
           {% if block.settings.img_3 %}
               <div class="custom_icon">
-                {% render 'responsive-image' with image: block.settings.img_3 %}
+                {% render 'responsive-image' with image: block.settings.img_3 | img_url: '20x20' %}
                 <div class="custom_icon--caption">
                   {{ block.settings.img_caption_3 }}
                 </div>
@@ -555,14 +555,20 @@
                 block: block
       section_color: section_color
       %}
+      {% comment %}
       {%- when 'share_buttons' -%}
       <div class="mt-8" {{ block.shopify_attributes }}>
         {% render 'social-sharing', tag: 'h2', share_title: product.title, share_permalink: product.url, share_image: product, section_color: section_color %}
       </div>
+      {% endcomment %}
       {%- endcase -%}
       {%- endif -%}
       {%- endfor -%}
+      <div class="mt-8" {{ block.shopify_attributes }}>
+        {% render 'social-sharing', tag: 'h2', share_title: product.title, share_permalink: product.url, share_image: product, section_color: section_color %}
+      </div>
     </div>
+    
     {%- unless no_social_blocks -%}
     <div class="lg:col-start-1 lg:col-end-4 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding py-theme product-block-area">
       {% comment %}
@@ -605,10 +611,12 @@
                   block: block
       section_color: section_color
       %}
+      {% comment %}
       {%- when 'share_buttons' -%}
       <div class="mt-8" {{ block.shopify_attributes }}>
         {% render 'social-sharing', tag: 'h2', share_title: product.title, share_permalink: product.url, share_image: product, section_color: section_color %}
       </div>
+      {% endcomment %}
       {%- endcase -%}
       {%- endif -%}
       {%- endfor -%}
