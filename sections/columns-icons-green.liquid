@@ -8,6 +8,16 @@
     assign reverse_col_order = section.settings.reverse_col_order
     assign v_align_items	   = section.settings.v_align_items 
   -%}
+
+  {% for block in section.blocks %}
+    {% unless block.settings.image_picker %}
+      {% assign show_block = true %}
+    {% endunless %}
+  {% endfor %}
+
+  {% if show_block %}
+    
+  {% endif %}
   
 
   <div class="w-100" style="background-color: {{ section_bg_color }};">
