@@ -440,14 +440,14 @@
       "settings": {
       }
     },
-    "ccdface6-da18-477b-bb73-43ff8d9049cd": {
-      "type": "columns-icons",
+    "8e51457f-2e2c-46c6-bceb-19fe2802ad00": {
+      "type": "columns-icons-green",
       "blocks": {
-        "2e3bbd58-43f6-4275-98e7-27ca5c04a5ec": {
+        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f": {
           "type": "image-with-text",
           "settings": {
-            "col_padding_y": "",
-            "col_padding_x": "",
+            "col_padding_y": "py-6 lg:py-12",
+            "col_padding_x": "px-6 lg:px-12",
             "image_stretch": false,
             "min_height": "natural",
             "image": "shopify:\/\/shop_images\/resurs2.jpg",
@@ -468,11 +468,11 @@
             "cta_style": "link"
           }
         },
-        "7e49d693-8853-45a8-8938-5bed53306c67": {
+        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f": {
           "type": "image-with-text",
           "settings": {
-            "col_padding_y": "",
-            "col_padding_x": "",
+            "col_padding_y": "py-6 lg:py-12",
+            "col_padding_x": "px-6 lg:px-12",
             "image_stretch": false,
             "min_height": "natural",
             "image": "shopify:\/\/shop_images\/resurs3.jpg",
@@ -493,11 +493,11 @@
             "cta_style": "link"
           }
         },
-        "ca589f05-6a59-4097-9d3f-d8f3674dba13": {
+        "d5a428da-9356-4d7f-b659-cb71f23ee1be": {
           "type": "image-with-text",
           "settings": {
-            "col_padding_y": "",
-            "col_padding_x": "",
+            "col_padding_y": "py-6 lg:py-12",
+            "col_padding_x": "px-6 lg:px-12",
             "image_stretch": false,
             "min_height": "natural",
             "image": "shopify:\/\/shop_images\/resurs1.jpg",
@@ -520,17 +520,17 @@
         }
       },
       "block_order": [
-        "2e3bbd58-43f6-4275-98e7-27ca5c04a5ec",
-        "7e49d693-8853-45a8-8938-5bed53306c67",
-        "ca589f05-6a59-4097-9d3f-d8f3674dba13"
+        "a974c835-0c76-4fc4-8b7f-55f93b2d4f6f",
+        "82b4e2f7-ac3f-41cb-971e-bdd8cd4c5b3f",
+        "d5a428da-9356-4d7f-b659-cb71f23ee1be"
       ],
       "settings": {
         "section_bg_color": "transparent",
         "max_width": "",
-        "section_x_padding": "px-8",
-        "section_y_margin": "my-8",
+        "section_x_padding": "px-4",
+        "section_y_margin": "my-4",
         "col_widths": 2,
-        "col_gap": "gap-6 lg:gap-10",
+        "col_gap": "",
         "reverse_col_order": false,
         "v_align_items": "self-center"
       }
@@ -550,6 +550,6 @@
     "60345b1a-4d35-4df5-9e90-4291b1d103e3",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
     "1643190266cb6795f8",
-    "ccdface6-da18-477b-bb73-43ff8d9049cd"
+    "8e51457f-2e2c-46c6-bceb-19fe2802ad00"
   ]
 }
