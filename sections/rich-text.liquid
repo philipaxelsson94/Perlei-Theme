@@ -36,7 +36,11 @@
       assign desktop_alignment = 'justify-center'
   endcase
 -%}
-<section class="bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden border-t-grid border-grid-color {{ padding_top }} {{ margin_bottom }}" style="background-color: {{ section_bg_color }};">
+
+{% if section.settings.title == blank %}
+  {% assign state = "none" %}
+{% endif %}
+<section class="bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden border-t-grid border-grid-color {{ padding_top }} {{ margin_bottom }}" style="background-color: {{ section_bg_color }}; display: {{ state }};">
   <div class="{{ padding_x_class }} py-theme mb-2 lg:mb-4">
     <div class="flex {{ text_size_mobile }} {{ text_size_desktop }} {{ text_align }} {{ desktop_alignment }}">
       <div class="w-full {{ desktop_width }}">
@@ -158,7 +162,8 @@
         "label": "Text size - desktop",
         "options": [
           { "value": "default", "label": "Same as mobile"},
-		  { "value": "lg:text-xl","label":  "XL"},
+          { "value": "lg:text-l","label":  "L"},
+		      { "value": "lg:text-xl","label":  "XL"},
           { "value": "lg:text-2xl","label":  "2XL"},
           { "value": "lg:text-3xl", "label": "3XL"},
           { "value": "lg:text-4xl", "label": "4XL"},

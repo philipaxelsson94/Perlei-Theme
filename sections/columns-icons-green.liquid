@@ -8,13 +8,16 @@
     assign reverse_col_order = section.settings.reverse_col_order
     assign v_align_items	   = section.settings.v_align_items 
   -%}
-  
-
+  {% for block in section.blocks %}
+    {% if block.settings.image != blank %}
+     {% assign state = true %}
+    {% endif %}
+  {% endfor %}
+  {% if state %}
   <div class="w-100" style="background-color: {{ section_bg_color }};">
     <div class="columns-icons-green flex flex-wrap lg:flex-nowrap {% if max_width != '' %}{{ max_width }} mx-auto{% endif %} {{ section_x_padding }} {{ section_y_margin }}  {% if reverse_col_order %}flex-col-reverse lg:flex-row{% endif %}">
   
       {% for block in section.blocks %}
-      {% if block.settings.image != blank %}
   
       <div class="column-icon-green {% if block.type == 'image-with-text' %}self-stretch{% else %}{{ v_align_items }}{% endif %} w-full {{ col_padding_x }} {{ col_padding_y }} {% if col_widths == 1 %}{% if forloop.index0 == 0 %}lg:w-1/3{% else %}lg:w-2/3{% endif %}{% elsif col_widths == 3 %}{% if forloop.index0 == 0 %}lg:w-2/3{% else %}lg:w-1/3{% endif %}{% else %}lg:w-1/6{% endif %}">
   
@@ -186,10 +189,11 @@
         {% endcase %}
   
       </div>
-      {% endif %}
+      
       {% endfor %}
     </div>
-  </div>  
+  </div>
+  {% endif %}
   {% schema %}
   {
     "name": "Columns-icons-green",

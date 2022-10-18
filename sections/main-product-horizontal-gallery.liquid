@@ -569,9 +569,11 @@
       </div>
     </div>
     
+    {% comment %}
     {%- unless no_social_blocks -%}
+    
     <div class="lg:col-start-1 lg:col-end-4 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding py-theme product-block-area">
-      {% comment %}
+      
       {%- if show_custom_icons -%}
       <div class="max-w-xxs lg:max-w-xs flex justify-between gap-4 lg:px-4">
         {% render 'icon-cruelty-free' %}
@@ -579,7 +581,7 @@
         {% render 'icon-fragrance-free' %}
       </div>
       {%- endif -%}
-      {% endcomment%}
+      
 
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
@@ -622,6 +624,7 @@
       {%- endfor -%}
     </div>
     {%- endunless -%}
+    {% endcomment%}
   </div>
 
   {% unless product == empty %}

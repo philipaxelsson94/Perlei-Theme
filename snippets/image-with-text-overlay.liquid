@@ -14,6 +14,7 @@
     }
   </style>
 {% endif %}
+{% if image != blank %}
 
 <div class="bg-{{ background }}-background border-t-grid border-grid-color relative overflow-hidden {% if height == 'full_screen' %}h-screen-header{% elsif height == 'full_height' %}h-full{% else %}h-auto{% endif %}">
   <div class="{% unless settings.fill_image_to_border_edge %}p-2 lg:p-4 {% endunless %} {% if indent_image %}p-8 lg:p-16{% endif %} h-full w-full">
@@ -96,3 +97,4 @@
     </div>
   </div>
 </div>
+{% endif %}

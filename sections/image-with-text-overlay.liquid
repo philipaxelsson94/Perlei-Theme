@@ -19,8 +19,9 @@
   assign cta_style  = section.settings.cta_style 
 -%}
 
+{% if section.settings.image != blank %}
+
 <section>
-  {% if section.settings.image != blank %}
   {%- render 'image-with-text-overlay',
     height: height,
   	max_height: max_height,
@@ -41,9 +42,8 @@
     cta_text: cta_text,
     cta_style: cta_style
   -%}
-  {% endif %}
 </section>
-
+{% endif %}
 {% schema %}
 {
   "name": "Image with text overlay",
