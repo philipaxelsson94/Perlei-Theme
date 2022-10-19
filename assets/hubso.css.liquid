@@ -678,42 +678,53 @@ div.rc-widget .rc-selling-plans.rc_widget__option__plans .rc_widget__option__pla
 }
 
 /* ========================= */
+/* Column icons  */
+/* ========================= */
+
+@media(max-width:1024px){.product-block-area .product-title-block{
+  text-align:center;
+  }
+}
+
+@media(max-width:1024px){.product-block-area .product-price-block{
+  text-align:center;
+  }
+}
+
+/* ========================= */
 /* Custom Product Page Icons */
 /* ========================= */
 body.template-product .custom_icons {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding:10px;
-  gap:5em;
+}
+
+body.template-product .custom_icons .custom_icon {
+  width:25%;
+}
+body.template-product .custom_icons .custom_icon .custom_icon_img{
+  padding:15px;
+  margin:15px;
+}
+
+body.template-product .custom_icons .custom_icon .custom_icon_caption{
+  text-align:center;
 }
 
 @media(max-width:1024px){
-  body.template-product .custom_icons{
-  gap:3em;
+  body.template-product .custom_icons .custom_icon .custom_icon_caption{
+    font-size:9px;
+  }
+}
+
+@media(max-width:1024px){
+  body.template-product .custom_icons .custom_icon .custom_icon_img{
+    margin:10px;
   }
 }
 
 
-body.template-product .custom_icons .custom_icon {
-  flex:25%;
-}
-@media(min-width:1024px){
-  body.template-product .custom_icons .custom_icon img{
-  padding:10px;
-  }
-}
-
-body.template-product .custom_icons .custom_icon .custom_icon--caption{
-  text-align:center;
-  margin-top:10px;
-}
-
-@media (max-width:768px){
-  body.template-product .custom_icons .custom_icon .custom_icon--caption{
-    font-size:10px;
-  }
-}
 
 
 /* ========================= */
@@ -750,6 +761,7 @@ body.template-product .custom_icons .custom_icon .custom_icon--caption{
   justify-content: center;
   display:flex;
 }
+
 
 
 /* ========================= */
