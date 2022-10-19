@@ -43,8 +43,14 @@
             "position": "product_description",
             "text": "{{ product.metafields.custom.product_quote.value }}",
             "font": "heading",
-            "text_size": "text-base lg:text-lg",
+            "text_size": "text-base lg:text-xl",
             "icon": "none"
+          }
+        },
+        "share_buttons": {
+          "type": "share_buttons",
+          "settings": {
+            "position": "product_extra"
           }
         },
         "description": {
@@ -52,12 +58,6 @@
           "settings": {
             "enable_collapsible_tabs": true,
             "truncate_description": false
-          }
-        },
-        "share_buttons": {
-          "type": "share_buttons",
-          "settings": {
-            "position": "product_extra"
           }
         },
         "39179b48-96d5-497a-956b-431516e7a4b6": {
@@ -81,8 +81,8 @@
         "f8664129-2a1f-47be-8c14-4dc2bcf56201",
         "buy_buttons",
         "cae47670-a0f1-4365-afee-838bf02c5a7f",
-        "description",
         "share_buttons",
+        "description",
         "39179b48-96d5-497a-956b-431516e7a4b6"
       ],
       "settings": {
