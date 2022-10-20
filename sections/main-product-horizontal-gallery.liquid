@@ -8,6 +8,7 @@
   assign no_social_blocks = true
   assign show_custom_icons = section.settings.show_custom_icons 
   assign product_volume = product.metafields.custom.product_volume
+
   for block in section.blocks
     if block.settings.position == 'product_extra'
       assign no_social_blocks = false
@@ -17,6 +18,7 @@
 -%}
 
 {% capture full_product %}
+
 <section class="bg-primary-background text-primary-text" x-data="ThemeSection_{{ section.id | handleize | replace: '-', '_' }}()" x-init="mounted()" data-section-id="{{ section.id }}" data-alpine-id="{{ section.id | handleize | replace: '-', '_' }}" data-section-type="product" data-enable-history-state="true" data-enable-image-zoom={{ section.settings.enable_image_zoom | json }} data-variant-image-behaviour="{{ section.settings.variant_image_behaviour }}" data-product-horizontal-gallery>
 
   {%- liquid
@@ -395,7 +397,7 @@
               <template x-if="current_variant">
                 <div>
                   <template x-if="currentVariantAvailable">
-                    <span>{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    <span style="color:{{block.settings.buy_color}}">{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
                   </template>
                   <template x-if="!currentVariantAvailable">
                     <span>{{ 'products.product.sold_out' | t }}</span>
@@ -513,7 +515,7 @@
             {% if block.settings.img_4 %}
               <div class="custom_icon">
                 <div class="custom_icon_img">
-                  {% render 'responsive-image' with image: block.settings.img_4 %}
+                  {% render 'responsive-image' with image: block.settings.img_4  %}
                 </div>
                 <div class="custom_icon_caption">
                   {{ block.settings.img_caption_4 }}
@@ -901,6 +903,16 @@
             "id": "show_pickup_availability",
             "label": "Show pickup availability [Learn more](https://help.shopify.com/en/manual/sell-in-person/pos-classic/shopify-pos-from-admin/buy-online-pickup-in-store#show-pickup-availability-to-your-customers)",
             "default": true
+          },
+          {
+            "type": "header",
+            "content": "Text color"
+          },
+          {
+            "type": "color",
+            "id": "buy_color",
+            "label": "Body text",
+            "default": "#000000"
           }
         ]
       },
