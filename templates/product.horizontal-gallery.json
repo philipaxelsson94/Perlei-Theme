@@ -513,8 +513,8 @@
         "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1": {
           "type": "testimonial",
           "settings": {
-            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
-            "source": "Source"
+            "quote": "<p>{{ product.metafields.custom.logo_testimonial_quote | metafield_tag }}<\/p>",
+            "source": "{{ product.metafields.custom.logo_testimonial_quoted_by.value }}"
           }
         }
       },
