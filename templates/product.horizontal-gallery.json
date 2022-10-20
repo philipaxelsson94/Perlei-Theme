@@ -34,7 +34,8 @@
           "type": "buy_buttons",
           "settings": {
             "enable_payment_button": false,
-            "show_pickup_availability": false
+            "show_pickup_availability": false,
+            "buy_color": "#ffffff"
           }
         },
         "cae47670-a0f1-4365-afee-838bf02c5a7f": {
@@ -162,8 +163,9 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
-        "show_product_recommendations": true,
+        "show_product_recommendations": false,
         "product_recommendations_heading": "You may also like",
         "limit": "4",
         "products_per_row_desktop": "4",
@@ -177,10 +179,10 @@
         "section_bg_color": "rgba(0,0,0,0)",
         "padding_top": "",
         "margin_bottom": "",
-        "padding_x": "",
+        "padding_x": "px-2 lg:px-4",
         "title": "{{ product.metafields.custom.green_icons_title.value }}",
         "text": "",
-        "text_size_mobile": "text-lg",
+        "text_size_mobile": "text-sm",
         "text_size_desktop": "lg:text-5xl",
         "font": "body",
         "text_alignment": "text-center",
@@ -316,7 +318,7 @@
         "section_bg_color": "rgba(0,0,0,0)",
         "padding_top": "",
         "margin_bottom": "",
-        "padding_x": "",
+        "padding_x": "px-2 lg:px-4",
         "title": "{{ product.metafields.custom.quote_section_heading.value }}",
         "text": "",
         "text_size_mobile": "text-base",
