@@ -507,7 +507,7 @@
           "type": "logo",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Eye-green-RGB.png"
+            "image": "{{ product.metafields.custom.logo_testimonial.value }}"
           }
         },
         "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1": {
