@@ -16,7 +16,6 @@
     endif 
   -%}
   {%endcomment%}
-  <h1>hej</h1>
   <section class="border-t-grid border-grid-color bg-border">
     {% if section.settings.heading != '' %}
       {%- render 'section-title',
@@ -51,7 +50,7 @@
   
   {% schema %}
     {
-      "name": "Testimonials with images",
+      "name": "Logo with testimonials",
       "settings": [
         {
           "id": "heading",
@@ -151,8 +150,8 @@
       ],
       "blocks": [
         {
-          "type": "testimonial",
-          "name": "Testimonial",
+          "type": "logo",
+          "name": "Logo",
           "limit": 2,
           "settings": [
             {
@@ -179,14 +178,34 @@
               "default": "Source"
             }
           ]
-        }
+        },
+        {
+            "type": "testimonial",
+            "name": "Testimonials",
+            "limit": 2,
+            "settings": [
+              {
+                "type": "richtext",
+                "id": "quote",
+                "label": "Quote",
+                "default": "<p>A quote from a customer or staff member can help show of your products' unique selling points.</p>"
+              },
+              {
+                "type": "text",
+                "id": "source",
+                "label": "Source",
+                "default": "Source"
+              }
+            ]
+          }
       ],
+      
       "presets": [
         {
-          "name": "Testimonials with images",
+          "name": "Logo with testimonials",
           "blocks": [
             {
-              "type": "testimonial"
+              "type": "logo"
             },
             {
               "type": "testimonial"
