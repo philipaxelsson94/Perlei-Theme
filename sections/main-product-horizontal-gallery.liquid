@@ -397,7 +397,7 @@
               <template x-if="current_variant">
                 <div>
                   <template x-if="currentVariantAvailable">
-                    <span style="color:{{block.settings.buy_color}}">{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    <span id="addToCartButtonText" style="color:{{block.settings.buy_color}}">{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
                   </template>
                   <template x-if="!currentVariantAvailable">
                     <span>{{ 'products.product.sold_out' | t }}</span>
