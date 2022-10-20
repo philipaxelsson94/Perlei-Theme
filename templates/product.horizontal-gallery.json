@@ -173,6 +173,29 @@
         "color_scheme": "primary"
       }
     },
+    "eae45f94-d37a-4717-8fcf-50d814daf269": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "{{ product.metafields.custom.testimonial_image_desktop.value }}",
+        "image_mobile": "{{ product.metafields.custom.testimonial_image_mobile.value }}",
+        "indent_image": false,
+        "height": "natural",
+        "max_height": "",
+        "image_focal_point": "object-center",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "content_width_mobile": "w-full",
+        "content_padding_desktop": "",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
     "f9fc9028-5711-4e9c-bebe-e03a993d6d45": {
       "type": "rich-text",
       "settings": {
@@ -499,37 +522,6 @@
       ],
       "settings": {
       }
-    },
-    "2fcc7e27-e9ef-4568-b195-79563706ec25": {
-      "type": "logo-with-testimonials",
-      "blocks": {
-        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-0": {
-          "type": "logo",
-          "settings": {
-            "show_image": true,
-            "image": "{{ product.metafields.custom.logo_testimonial.value }}"
-          }
-        },
-        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "<p>{{ product.metafields.custom.logo_testimonial_quote | metafield_tag }}<\/p>",
-            "source": "{{ product.metafields.custom.logo_testimonial_quoted_by.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-0",
-        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1"
-      ],
-      "settings": {
-        "heading": "",
-        "crop": "1",
-        "text_style": "heading",
-        "text_size": "text-xl",
-        "text_align": "text-left",
-        "color_scheme": "primary"
-      }
     }
   },
   "order": [
@@ -537,6 +529,7 @@
     "be69bfa5-727d-416a-ac4f-5dedddbe6a4d",
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
+    "eae45f94-d37a-4717-8fcf-50d814daf269",
     "f9fc9028-5711-4e9c-bebe-e03a993d6d45",
     "8e51457f-2e2c-46c6-bceb-19fe2802ad00",
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
@@ -545,7 +538,6 @@
     "60345b1a-4d35-4df5-9e90-4291b1d103e3",
     "166610583836c00d35",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
-    "1643190266cb6795f8",
-    "2fcc7e27-e9ef-4568-b195-79563706ec25"
+    "1643190266cb6795f8"
   ]
 }
