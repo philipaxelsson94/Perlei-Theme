@@ -499,6 +499,37 @@
       ],
       "settings": {
       }
+    },
+    "2fcc7e27-e9ef-4568-b195-79563706ec25": {
+      "type": "logo-with-testimonials",
+      "blocks": {
+        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-0": {
+          "type": "logo",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Eye-green-RGB.png"
+          }
+        },
+        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>A quote from a customer or staff member can help show of your products' unique selling points.<\/p>",
+            "source": "Source"
+          }
+        }
+      },
+      "block_order": [
+        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-0",
+        "template--16102357270677__2fcc7e27-e9ef-4568-b195-79563706ec25-166626084712f29703-1"
+      ],
+      "settings": {
+        "heading": "",
+        "crop": "1",
+        "text_style": "heading",
+        "text_size": "text-xl",
+        "text_align": "text-left",
+        "color_scheme": "primary"
+      }
     }
   },
   "order": [
@@ -514,6 +545,7 @@
     "60345b1a-4d35-4df5-9e90-4291b1d103e3",
     "166610583836c00d35",
     "57a31171-c6c8-4f8d-8ebc-c44c6b5e4478",
-    "1643190266cb6795f8"
+    "1643190266cb6795f8",
+    "2fcc7e27-e9ef-4568-b195-79563706ec25"
   ]
 }
