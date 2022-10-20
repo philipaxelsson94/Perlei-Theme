@@ -24,14 +24,16 @@
       -%}
     {% endif %}
   
-    <div class="section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }} gap-10">
-        <div class="grid grid-cols-2 gap-4">
+    <div class="logo-with-testimonial section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }} gap-10">
+        <div class="logo-width-testimonial-block grid grid-cols-2 gap-4">
 
         {%-for block in section.blocks -%}
             <div>
             {%- if block.settings.show_image -%}
                 {%- if block.settings.image != blank -%}
-                    <img src="{{block.settings.image |  img_url: 'master'}}" alt="beforeafter">
+                    <div class="p-3 m-3 logo-block">
+                        {% render 'responsive-image' with image: block.settings.image %}
+                    </div>
                 {%- endif -%}
             {%- endif- %}
                 <blockquote class="flex-1 {{ section.settings.text_align }}">
