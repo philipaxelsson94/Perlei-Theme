@@ -323,7 +323,7 @@
         "title": "",
         "text": "<p>{{ product.metafields.custom.green_icons_text | metafield_tag }}<\/p>",
         "text_size_mobile": "text-sm",
-        "text_size_desktop": "lg:text-l",
+        "text_size_desktop": "lg:text-xl",
         "font": "body",
         "text_alignment": "text-center",
         "cta_margin_top": "mt-2 lg:mt-4",
