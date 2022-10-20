@@ -37,7 +37,7 @@
   endcase
 -%}
 
-{% if section.settings.title == blank %}
+{% if section.settings.title == blank and section.settings.text == blank %}
   {% assign state = "none" %}
 {% endif %}
 <section class="bg-{{ section_color }}-background text-{{ section_color }}-text overflow-hidden border-t-grid border-grid-color {{ padding_top }} {{ margin_bottom }}" style="background-color: {{ section_bg_color }}; display: {{ state }};">

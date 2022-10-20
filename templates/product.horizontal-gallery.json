@@ -322,7 +322,7 @@
         "padding_x": "px-2 lg:px-4",
         "title": "",
         "text": "<p>{{ product.metafields.custom.green_icons_text | metafield_tag }}<\/p>",
-        "text_size_mobile": "text-base",
+        "text_size_mobile": "text-sm",
         "text_size_desktop": "lg:text-l",
         "font": "body",
         "text_alignment": "text-center",
@@ -330,8 +330,8 @@
         "cta_link": "",
         "cta_text": "",
         "cta_style": "link",
-        "desktop_width": "full",
-        "desktop_alignment": "left",
+        "desktop_width": "two_thirds",
+        "desktop_alignment": "center",
         "color_scheme": "primary"
       }
     },
