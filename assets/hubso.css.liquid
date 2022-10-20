@@ -850,8 +850,19 @@ body.template-product .custom_icons .custom_icon .custom_icon_caption{
 /* logo with testimonials */
 /* ========================= */
 
+#addToCartButton:hover{
+  color:rgb(238 118 138);
+  background-color:white;
+  border-color:rgb(238 118 138);
+}
+
+/* ========================= */
+/* logo with testimonials */
+/* ========================= */
+
 .logo-with-testimonial{
   background-color:#F5F1F6;
+  
 }
 
 .logo-with-testimonial-block{
@@ -866,7 +877,7 @@ body.template-product .custom_icons .custom_icon .custom_icon_caption{
 
 .logo-block-image img{
   background-color:#AF8AB6;
-  padding:20px;
+  padding:20px 10px 20px 10px;
   margin:20px;
 }
 
@@ -876,17 +887,40 @@ body.template-product .custom_icons .custom_icon .custom_icon_caption{
   }
 }
 
-.logo-block{
-  width:36%
+@media(max-width:1024px){
+  .logo-block{
+  width:28%;
+  }
 }
 
-.testi-block{
-  width:63%
+@media(min-width:1024px){
+  .logo-block{
+  width:30%;
+  }
+}
+
+@media(min-width:1024px){
+  .testi-block{
+  width:60%;
+  }
+}
+
+@media(max-width:1024px){
+  .testi-block{
+    width:69%
+  }
+}
+
+.testimonial-font{
+  margin:0 15px 0 15px;
 }
 
 @media(max-width:1024px){
   .testimonial-font p{
-  font-size:12px;
+  font-size:8px;
   }
 }
 
+.cited-by-text{
+  font-weight:800;
+}

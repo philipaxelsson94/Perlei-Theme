@@ -16,6 +16,9 @@
     endif 
   -%}
   {%endcomment%}
+
+  {%-for block in section.blocks -%}
+    {%- if block.settings.image != blank -%}
   <section class="border-t-grid border-grid-color bg-border">
     {% if section.settings.heading != '' %}
       {%- render 'section-title',
@@ -23,8 +26,11 @@
         section_color: section_color
       -%}
     {% endif %}
+
+
+        
   
-    <div class="logo-with-testimonial section-x-padding py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }}">
+    <div class="logo-with-testimonial section-x-padding mt-4 mb-4 py-theme bg-{{ section_color }}-background text-{{ section_color }}-text  grid {{ grid_class }}">
         <div class="logo-with-testimonial-block grid grid-cols-3">
             {%-for block in section.blocks -%}
                 {% if block.type == "logo" %}
@@ -43,11 +49,17 @@
                 {% if block.type == "testimonial" %}
                     <div class="col-start-2 testi-block">
                         <blockquote class="flex-1 {{ section.settings.text_align }}">
+                            <div class="w-full flex justify-start">
+                                <img src="{{ 'quote.png' | asset_img_url: '16x'}}">
+                            </div>
                             <div class="testimonial-font font-{{ section.settings.text_style }} {{ section.settings.text_size }}">
                                 {{ block.settings.quote }}
                             </div>
+                            <div class="w-full flex justify-end">
+                                <img src="{{ 'quote.png' | asset_img_url: '16x'}}">
+                            </div>
                             {% if block.settings.source != blank %}
-                                <footer class="mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
+                                <footer class="cited-by-text mt-2 font-secondary text-base">- {{ block.settings.source }}</footer>
                             {% endif %}
                         </blockquote>
                     </div>
@@ -56,6 +68,9 @@
         </div>
     </div>
   </section>
+
+  {% endif %}
+{% endfor%}
   
   {% schema %}
     {
@@ -182,10 +197,10 @@
             "limit": 2,
             "settings": [
               {
-                "type": "richtext",
+                "type": "text",
                 "id": "quote",
                 "label": "Quote",
-                "default": "<p>A quote from a customer or staff member can help show of your products' unique selling points.</p>"
+                "default": "A quote from a customer or staff member can help show of your products' unique selling points."
               },
               {
                 "type": "text",
