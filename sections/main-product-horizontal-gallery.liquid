@@ -534,7 +534,7 @@
           </div>
         {% endif %}
       {%- endfor -%}
-      {%- for block in section.blocks -%}
+      {% if block.type == 'quote' %}
       <blockquote class="mt-4">
         {%- if block.settings.quote != blank -%}
           <div class="d-flex">
@@ -543,7 +543,7 @@
           </div>
         {%- endif -%}
       </blockquote>
-    {%- endfor -%}
+      {% endif %}
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
       {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' -%}
