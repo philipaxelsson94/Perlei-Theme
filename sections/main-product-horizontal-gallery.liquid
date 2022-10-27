@@ -534,16 +534,16 @@
           </div>
         {% endif %}
       {%- endfor -%}
-      {% if block.type == 'quote' %}
-      <blockquote class="mt-4">
+      {% for block in section.blocks %}
         {%- if block.settings.quote != blank -%}
-          <div class="d-flex">
-            <span style="font-size:18px;">{{ block.settings.quote }}</span>
-            <span style="color:grey; font-size:12px;">{{block.settings.author}}</span>
-          </div>
+          <blockquote class="mt-8">
+              <div class="d-flex">
+                <span style="font-size:18px;">{{ block.settings.quote }}</span>
+                <span style="color:grey; font-size:12px;">{{block.settings.author}}</span>
+              </div>
+          </blockquote>
         {%- endif -%}
-      </blockquote>
-      {% endif %}
+      {% endfor %}
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
       {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' -%}
