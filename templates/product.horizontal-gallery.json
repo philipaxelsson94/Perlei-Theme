@@ -66,8 +66,8 @@
         "1ca131d6-4bd1-488f-b6ac-7ed2ad38f256": {
           "type": "quote",
           "settings": {
-            "quote": "‘’This gives an amazing result! I have relatively thin eyebrows but this shapes and defines my brows and gives a really good result.’’ Sofie",
-            "author": "Verifierad köpare"
+            "quote": "{{ product.metafields.custom.product_quote.value }}",
+            "author": "{{ product.metafields.custom.main_testimonial_cite.value }}"
           }
         }
       },
