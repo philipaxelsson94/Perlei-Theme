@@ -39,18 +39,7 @@
   <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-{{ section_color }}-background text-{{ section_color }}-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
     <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
       <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
-        
         <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
-          <div class="js-enabled splide__arrows text-{{ section_color }}-text absolute right-0 {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
-            <button class="splide__arrow splide__arrow--prev w-8">
-              <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
-              <span class="block">{% render 'icon-back' %}</span>
-            </button>
-            <button class="splide__arrow splide__arrow--next w-8">
-              <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
-              <span class="block">{% render 'icon-forward' %}</span>
-            </button>
-          </div>
           {%- if featured_media != null -%}
           {%- assign media = featured_media -%}
           <li data-first-media class="splide__slide bg-{{ section_color }}-background relative {% if settings.fill_image_to_border_edge %}lg:border-r-grid lg:border-grid-color{% endif %}" data-index="0">
@@ -417,7 +406,7 @@
               <template x-if="current_variant">
                 <div>
                   <template x-if="currentVariantAvailable">
-                    <span id="addToCartButtonText" style="color:{{block.settings.buy_color}}">{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    <span id="addToCartButtonText" >{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
                   </template>
                   <template x-if="!currentVariantAvailable">
                     <span>{{ 'products.product.sold_out' | t }}</span>
@@ -923,16 +912,6 @@
             "id": "show_pickup_availability",
             "label": "Show pickup availability [Learn more](https://help.shopify.com/en/manual/sell-in-person/pos-classic/shopify-pos-from-admin/buy-online-pickup-in-store#show-pickup-availability-to-your-customers)",
             "default": true
-          },
-          {
-            "type": "header",
-            "content": "Text color"
-          },
-          {
-            "type": "color",
-            "id": "buy_color",
-            "label": "Body text",
-            "default": "#000000"
           }
         ]
       },
