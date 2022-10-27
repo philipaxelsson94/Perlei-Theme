@@ -34,18 +34,7 @@
           "type": "buy_buttons",
           "settings": {
             "enable_payment_button": false,
-            "show_pickup_availability": false,
-            "buy_color": "#ffffff"
-          }
-        },
-        "cae47670-a0f1-4365-afee-838bf02c5a7f": {
-          "type": "text",
-          "settings": {
-            "position": "product_description",
-            "text": "{{ product.metafields.custom.product_quote.value }}",
-            "font": "heading",
-            "text_size": "text-base lg:text-xl",
-            "icon": "none"
+            "show_pickup_availability": false
           }
         },
         "share_buttons": {
@@ -73,6 +62,13 @@
             "img_4": "shopify:\/\/shop_images\/icon1.jpg",
             "img_caption_4": "Revolutionary formula"
           }
+        },
+        "1ca131d6-4bd1-488f-b6ac-7ed2ad38f256": {
+          "type": "quote",
+          "settings": {
+            "quote": "‘’This gives an amazing result! I have relatively thin eyebrows but this shapes and defines my brows and gives a really good result.’’ Sofie",
+            "author": "Verifierad köpare"
+          }
         }
       },
       "block_order": [
@@ -81,10 +77,10 @@
         "variant_picker",
         "f8664129-2a1f-47be-8c14-4dc2bcf56201",
         "buy_buttons",
-        "cae47670-a0f1-4365-afee-838bf02c5a7f",
         "share_buttons",
         "description",
-        "39179b48-96d5-497a-956b-431516e7a4b6"
+        "39179b48-96d5-497a-956b-431516e7a4b6",
+        "1ca131d6-4bd1-488f-b6ac-7ed2ad38f256"
       ],
       "settings": {
         "desktop_image_height": 50,
