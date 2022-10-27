@@ -534,6 +534,16 @@
           </div>
         {% endif %}
       {%- endfor -%}
+      {%- for block in section.blocks -%}
+      <blockquote class="mt-4">
+        {%- if block.settings.quote != blank -%}
+          <div class="d-flex">
+            <span style="font-size:18px;">{{ block.settings.quote }}</span>
+            <span style="color:grey; font-size:12px;">{{block.settings.author}}</span>
+          </div>
+        {%- endif -%}
+      </blockquote>
+    {%- endfor -%}
       {%- assign tab_counter = 0 -%}
       {%- for block in section.blocks -%}
       {%- if block.settings.position == 'product_description' or block.type == 'description' or block.type == '@app' -%}
@@ -544,6 +554,7 @@
         {%- render block -%}
       </div>
       {% endif %}
+    
       {%- when 'description' -%}
       {%- liquid
                 assign enable_collapsible_tabs = block.settings.enable_collapsible_tabs
@@ -883,6 +894,24 @@
             "type": "checkbox",
             "id": "hide_option_labels",
             "label": "Hide option labels"
+          }
+        ]
+      },
+      {
+        "type": "quote",
+        "name": "testimonial test",
+        "settings": [
+          {
+            "type": "text",
+            "id": "quote",
+            "label": "Text",
+            "default": "Add customer reviews and testimonials to showcase your store’s happy customers."
+          },
+          {
+            "type": "text",
+            "id": "author",
+            "label": "Author",
+            "default": "Author’s name"
           }
         ]
       },
