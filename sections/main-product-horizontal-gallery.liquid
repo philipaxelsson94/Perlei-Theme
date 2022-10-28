@@ -15,6 +15,9 @@
     endif
   endfor
 -%}
+{%comment%}
+hej
+{%endcomment%}
 
 {% capture full_product %}
 
@@ -35,7 +38,7 @@
   {%- break -%}
   {%- endif -%}
   {%- endfor -%}
-
+  
   <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-{{ section_color }}-background text-{{ section_color }}-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
     <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
       <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
@@ -76,7 +79,6 @@
         </ul>
       </div>
       {% assign first_3d_model = product.media | where: "media_type", "model" | first %}
-      
       <div class="js-enabled splide__arrows text-{{ section_color }}-text absolute right-0 {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-1 lg:mr-4 text-right mt-2 ">
         <button class="splide__arrow splide__arrow--prev w-8">
           <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
@@ -87,7 +89,6 @@
           <span class="block">{% render 'icon-forward' %}</span>
         </button>
       </div>
-
       {%- if first_3d_model -%}
       <div class="section-x-padding text-center">
         <button aria-label="{{ 'products.product.view_in_space_label' | t }}"
