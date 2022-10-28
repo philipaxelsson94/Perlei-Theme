@@ -196,7 +196,7 @@
       "type": "rich-text",
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "padding_top": "",
+        "padding_top": "pt-4 lg:pt-8",
         "margin_bottom": "",
         "padding_x": "px-2 lg:px-4",
         "title": "{{ product.metafields.custom.green_icons_title.value }}",
@@ -335,7 +335,7 @@
       "type": "rich-text",
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "padding_top": "",
+        "padding_top": "pt-4 lg:pt-8",
         "margin_bottom": "",
         "padding_x": "px-2 lg:px-4",
         "title": "{{ product.metafields.custom.quote_section_heading.value }}",
@@ -488,7 +488,7 @@
       "settings": {
         "heading": "featured in",
         "max_width": 150,
-        "section_padding_y": "py-2 lg:py-4",
+        "section_padding_y": "py-4 lg:py-8",
         "text_alignment": "center",
         "logo_alignment": "center",
         "color_scheme": "primary"
