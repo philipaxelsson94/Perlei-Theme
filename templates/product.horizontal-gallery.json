@@ -196,7 +196,7 @@
       "type": "rich-text",
       "settings": {
         "section_bg_color": "rgba(0,0,0,0)",
-        "padding_top": "",
+        "padding_top": "pt-4 lg:pt-8",
         "margin_bottom": "",
         "padding_x": "px-2 lg:px-4",
         "title": "{{ product.metafields.custom.green_icons_title.value }}",
