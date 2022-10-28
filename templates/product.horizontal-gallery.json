@@ -488,7 +488,7 @@
       "settings": {
         "heading": "featured in",
         "max_width": 150,
-        "section_padding_y": "py-2 lg:py-4",
+        "section_padding_y": "py-4 lg:py-8",
         "text_alignment": "center",
         "logo_alignment": "center",
         "color_scheme": "primary"
