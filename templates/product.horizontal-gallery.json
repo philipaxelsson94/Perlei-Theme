@@ -463,8 +463,16 @@
         },
         "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-4": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/aftonbladet-logo-black-and-white.png",
+            "link": ""
+          }
+        },
+        "fc415c3d-f00e-48ff-8c87-844dd0ae808d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wellness_aftonbladet_207376a2-3d7a-4e03-a679-10d9b289fb52.png",
             "link": ""
           }
         }
@@ -474,7 +482,8 @@
         "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-1",
         "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-2",
         "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-3",
-        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-4"
+        "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-4",
+        "fc415c3d-f00e-48ff-8c87-844dd0ae808d"
       ],
       "settings": {
         "heading": "featured in",
