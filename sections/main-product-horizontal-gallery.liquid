@@ -15,14 +15,75 @@
     endif
   endfor
 -%}
-{%comment%}
-hej
-{%endcomment%}
+  <div
+      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+      class="swiper mySwiper2 mobile-swiper"
+    >
+      <div class="swiper-wrapper">
+        {%- for img in product.media -%}
+        {% case img.media_type %}
+          {% when 'video' %}
+            <div class="swiper-slide">
+              {{ img | video_tag: controls: true, autoplay: true }}
+            </div>
+          {% when 'image' %}
+            <div class="swiper-slide">
+              {% render 'responsive-image' with image: img %}
+            </div>
+        {% endcase %}
+        {%- endfor -%}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper pt-2 mobile-swiper">
+      <div class="swiper-wrapper">
+        {%- for img in product.media -%}
+          {% case img.media_type %}
+            {% when 'video' %}
+              <div class="swiper-slide">
+                {{ img | video_tag: controls: true, autoplay: true }}
+              </div>
+            {% when 'image' %}
+              <div class="swiper-slide">
+                {% render 'responsive-image'  with image: img %}
+              </div>
+          {% endcase %}
+        {%- endfor -%}
+      </div>
+    </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
 {% capture full_product %}
+
+<script>console.log({{ product | json }});</script>
 
 <section class="bg-primary-background text-primary-text" x-data="ThemeSection_{{ section.id | handleize | replace: '-', '_' }}()" x-init="mounted()" data-section-id="{{ section.id }}" data-alpine-id="{{ section.id | handleize | replace: '-', '_' }}" data-section-type="product" data-enable-history-state="true" data-enable-image-zoom={{ section.settings.enable_image_zoom | json }} data-variant-image-behaviour="{{ section.settings.variant_image_behaviour }}" data-product-horizontal-gallery>
 
+  
   {%- liquid
       assign current_variant = product.selected_or_first_available_variant
       assign featured_media = current_variant.featured_media | default: product.featured_media
@@ -39,7 +100,7 @@ hej
   {%- endif -%}
   {%- endfor -%}
   
-  <div class="relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-{{ section_color }}-background text-{{ section_color }}-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
+  <div class="desktop-swiper relative col-span-full {% if product.media.size > 1 %}pb-8{% endif %} product-media-container bg-{{ section_color }}-background text-{{ section_color }}-text {% unless settings.fill_image_to_border_edge %}border-b-grid border-grid-color lg:border-0{% endunless %}" data-product-single-media-group>
     <div id="splide" class="splide splide--product lg:sticky lg:top-sticky-header {% unless settings.fill_image_to_border_edge %}lg:py-4{% endunless %} " data-drag-disabled="{{ has_interactive_media }}" {% if slideshow_enabled %}data-slideshow-enabled="true"{% endif %}>
       <div id="splide-track" class="transition-max-height splide__track {% if settings.fill_image_to_border_edge %}border-b-grid border-grid-color{% endif %} {% unless settings.fill_image_to_border_edge %}lg:px-4{% endunless %} ">
         <ul id="splide-list" class="splide__list w-full {% if settings.fill_image_to_border_edge %}{% else %}lg:gap-4{% endif%}">
@@ -103,6 +164,7 @@ hej
       {%- endif -%}
     </div>
   </div>
+
 
   <div class="grid lg:grid-cols-12 gap-gutter bg-border grid-flow-row-dense lg:border-t-grid border-grid-color px-2 lg:px-0 pb-2 lg:pb-8">
     <div class="lg:col-start-1 lg:col-end-4 bg-{{ section_color }}-background text-{{ section_color }}-text h-full section-x-padding">

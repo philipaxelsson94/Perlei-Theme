@@ -9,7 +9,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6 {
-  font-family: decoy, serif !important;
+  font-family: var(--heading-font-stack);
   font-style: var(--heading-font-style);
   font-weight: var(--heading-font-weight);
 }
@@ -875,4 +875,20 @@ body.template-product .custom_icons .custom_icon .custom_icon_caption{
   font-family: var(--heading-font-stack);
 }
 
+
+/* ========================= */
+/* Product image gallery */
+/* ========================= */
+
+@media(min-width:769px){
+  .mobile-swiper{
+  display:none;
+  }
+}
+
+@media(max-width:768px){
+  .desktop-swiper{
+  display:none;
+  }
+}
 
