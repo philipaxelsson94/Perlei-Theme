@@ -79,7 +79,6 @@
     </script>
 {% capture full_product %}
 
-<script>console.log({{ product | json }});</script>
 
 <section class="bg-primary-background text-primary-text" x-data="ThemeSection_{{ section.id | handleize | replace: '-', '_' }}()" x-init="mounted()" data-section-id="{{ section.id }}" data-alpine-id="{{ section.id | handleize | replace: '-', '_' }}" data-section-type="product" data-enable-history-state="true" data-enable-image-zoom={{ section.settings.enable_image_zoom | json }} data-variant-image-behaviour="{{ section.settings.variant_image_behaviour }}" data-product-horizontal-gallery>
 
