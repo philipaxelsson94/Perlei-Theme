@@ -1,5 +1,10 @@
 {
   "sections": {
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {
+      }
+    },
     "165907906074db0267": {
       "type": "apps",
       "blocks": {
@@ -36,6 +41,7 @@
     }
   },
   "order": [
+    "pagefly-home",
     "165907906074db0267"
   ]
 }
