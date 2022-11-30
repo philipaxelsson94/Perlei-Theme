@@ -161,7 +161,7 @@
       "popup": {
         "type": "popup",
         "settings": {
-          "display_mode": "enabled",
+          "display_mode": "disabled",
           "delay": 4,
           "frequency": 30,
           "title": "",
@@ -180,7 +180,7 @@
     "blocks": {
       "10605408327587305396": {
         "type": "shopify:\/\/apps\/easygift-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "version": "v3"
         }
