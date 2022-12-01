@@ -50,6 +50,7 @@
     "enable_breadcrumbs": false,
     "breadcrumb_separator": "emdash",
     "sharing_display": "icons",
+    "social_style": "icons",
     "social_instagram_link": "https:\/\/www.instagram.com\/perleisweden",
     "social_facebook_link": "https:\/\/www.facebook.com\/perleisweden\/",
     "social_twitter_link": "",
@@ -176,16 +177,7 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "10605408327587305396": {
-        "type": "shopify:\/\/apps\/easygift-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": true,
-        "settings": {
-          "version": "v3"
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Bold": {
