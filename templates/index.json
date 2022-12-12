@@ -38,10 +38,66 @@
       ],
       "settings": {
       }
+    },
+    "802e66a8-9bce-419e-ba53-1f3a55bc7795": {
+      "type": "logo-list",
+      "blocks": {
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/daisy_logo.png",
+            "link": ""
+          }
+        },
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/styleby.png",
+            "link": ""
+          }
+        },
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/elle_logga.png",
+            "link": ""
+          }
+        },
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/damernas.png",
+            "link": ""
+          }
+        },
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wellness_aftonbladet_207376a2-3d7a-4e03-a679-10d9b289fb52.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-0",
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-1",
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-2",
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-3",
+        "template--16106743955605__802e66a8-9bce-419e-ba53-1f3a55bc7795-1670855806f2947b96-4"
+      ],
+      "settings": {
+        "heading": "Featured in",
+        "max_width": 150,
+        "section_padding_y": "",
+        "text_alignment": "center",
+        "logo_alignment": "center",
+        "color_scheme": "primary"
+      }
     }
   },
   "order": [
     "pagefly-home",
-    "165907906074db0267"
+    "165907906074db0267",
+    "802e66a8-9bce-419e-ba53-1f3a55bc7795"
   ]
 }
