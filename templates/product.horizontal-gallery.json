@@ -436,7 +436,7 @@
         "template--16096415416469__57a31171-c6c8-4f8d-8ebc-c44c6b5e4478-16657536482f8eac2c-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/daisy-beauty-logo-blue-640wide.png",
+            "image": "shopify:\/\/shop_images\/daisy_logo.png",
             "link": ""
           }
         },
@@ -498,7 +498,7 @@
       "type": "apps",
       "blocks": {
         "55bd067c-7cb1-4b98-be15-e548204a28ac": {
-          "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+          "type": "shopify:\/\/apps\/maestrooo-section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
           "settings": {
             "title": "Per Lei on Instagram",
             "subheading": "<p>Follow our journey!<\/p>",
