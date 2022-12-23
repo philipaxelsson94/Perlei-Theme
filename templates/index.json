@@ -33,9 +33,15 @@
       ],
       "settings": {
       }
+    },
+    "pagefly-home": {
+      "type": "pagefly-home",
+      "settings": {
+      }
     }
   },
   "order": [
-    "165907906074db0267"
+    "165907906074db0267",
+    "pagefly-home"
   ]
 }
