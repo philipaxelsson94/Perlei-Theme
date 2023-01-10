@@ -91,7 +91,7 @@
           "home_page_only": false,
           "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
-          "link": "https:\/\/upvir.al\/140220\/lp140220",
+          "link": "",
           "color_scheme": "secondary",
           "accent_as_bg_color": false,
           "speed": 270,
@@ -183,13 +183,6 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
-        }
-      },
-      "10605408327587305396": {
-        "type": "shopify:\/\/apps\/easygift-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": false,
-        "settings": {
-          "version": "v3"
         }
       }
     }
