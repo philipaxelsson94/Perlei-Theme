@@ -93,7 +93,7 @@
           "text": "Pay easy with Klarna \/ Fast Delivery",
           "link": "",
           "color_scheme": "secondary",
-          "accent_as_bg_color": false,
+          "accent_as_bg_color": true,
           "speed": 270,
           "direction": "",
           "repeat_text": true
