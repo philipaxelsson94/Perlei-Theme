@@ -89,16 +89,16 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": true,
+          "show_announcement_bar": false,
           "home_page_only": false,
           "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
           "link": "",
           "color_scheme": "secondary",
           "accent_as_bg_color": false,
-          "speed": 270,
+          "speed": 20,
           "direction": "",
-          "repeat_text": true
+          "repeat_text": false
         }
       },
       "header": {
