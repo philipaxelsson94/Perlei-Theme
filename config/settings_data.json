@@ -97,7 +97,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": true,
+          "show_announcement_bar": false,
           "home_page_only": false,
           "display": "marquee",
           "text": "Pay easy with Klarna \/ Fast Delivery",
