@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "color_border": "rgba(0,0,0,0)",
@@ -88,14 +97,14 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": false,
+          "show_announcement_bar": true,
           "home_page_only": false,
-          "display": "static",
+          "display": "marquee",
           "text": "Pay easy with Klarna \/ Fast Delivery",
           "link": "",
           "color_scheme": "secondary",
           "accent_as_bg_color": false,
-          "speed": 20,
+          "speed": 80,
           "direction": "",
           "repeat_text": false
         }
