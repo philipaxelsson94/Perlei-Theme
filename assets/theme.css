@@ -4445,6 +4445,12 @@ shopify-payment-terms {
     --tw-numeric-figure: oldstyle-nums;
   }
 }
+@font-face {
+font-family: "Absans-Regular";
+src: url("Absans-Regular.woff2") format(woff.2)
+  url("Absans-Regular.woff") format(woff)
+}
 
+H1,H2,H3,H4,h5,h6,body,p,a {font-family:"Absans-Regular"!important; }
 
 
