@@ -163,7 +163,7 @@
           "text_text": "<p><a href=\"mailto:info@perleisweden.com\" title=\"mailto:info@perleisweden.com\">info@perleisweden.com<\/a><\/p><p>PER LEI SWEDEN AB<br\/>Stora Nygatan 41<br\/>111 27, Stockholm<br\/>SWEDEN<\/p>",
           "show_social": true,
           "social_title": "Socials",
-          "show_newsletter": true,
+          "show_newsletter": false,
           "newsletter_section_title": "",
           "newsletter_subheading": "<p>Subscribe to our newsletter to receive special offers and first look at new products.<\/p>",
           "newsletter_color_scheme": "secondary",
