@@ -29,14 +29,14 @@
     "button_color": "accent_background",
     "button_style": "rounded",
     "base_font_size": 14,
-    "font_heading": "amiri_n4",
+    "font_heading": "avenir_next_rounded_n4",
     "heading_uppercase": false,
     "heading_underline": false,
     "heading_letterspacing": 0,
-    "base_heading_size": "text-xl",
-    "template_heading_size": "text-xl",
+    "base_heading_size": "text-lg",
+    "template_heading_size": "text-lg",
     "secondary_heading_size": "text-lg",
-    "font_body": "amiri_n4",
+    "font_body": "sans-serif",
     "base_line_height": 1.4,
     "body_copy_uppercase": false,
     "section_title_font": "heading",
@@ -71,8 +71,10 @@
     "social_tumblr_link": "",
     "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCBh3cx7dgzmxnJUju7ffC7w",
     "social_vimeo_link": "",
+    "ajax_cart_method": "drawer",
     "cart_notes_enable": false,
     "cart_color_scheme": "primary",
+    "favicon": "shopify:\/\/shop_images\/Namnlos_design_kopia.png",
     "checkout_logo_image": "shopify:\/\/shop_images\/PERLEI-black.png",
     "checkout_logo_size": "small",
     "checkout_accent_color": "#ee778a",
@@ -193,6 +195,34 @@
         "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {
+        }
+      },
+      "1232542678405107163": {
+        "type": "shopify:\/\/apps\/instafeed\/blocks\/head-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16278478101612877664": {
+        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "17151115064775110295": {
+        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
+        "disabled": false,
+        "settings": {
+          "color_brand": "#467C99",
+          "contrast_color": "#FFFFFF",
+          "color_brand_secondary": "#467C99",
+          "corners": "8px",
+          "app_background": "#f9f8f4",
+          "app_container": 1200,
+          "app_vertical_padding": 32,
+          "images_aspect_ratio": "1",
+          "cards_background": "#FFFFFF",
+          "cards_border_color": "rgba(0,0,0,0)"
         }
       }
     }
