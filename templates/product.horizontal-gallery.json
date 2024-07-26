@@ -144,29 +144,6 @@
         "color_scheme": "primary"
       }
     },
-    "eae45f94-d37a-4717-8fcf-50d814daf269": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image": "{{ product.metafields.custom.testimonial_image_desktop.value }}",
-        "image_mobile": "{{ product.metafields.custom.testimonial_image_mobile.value }}",
-        "indent_image": false,
-        "height": "natural",
-        "max_height": "",
-        "image_focal_point": "object-center",
-        "title": "",
-        "heading_size": "text-2xl lg:text-5xl",
-        "text": "",
-        "content_position": "justify-center items-center text-center",
-        "content_width_desktop": "lg:w-2\/3",
-        "content_width_mobile": "w-full",
-        "content_padding_desktop": "",
-        "text_color": "primary",
-        "background_color": "primary",
-        "cta_link": "",
-        "cta_text": "",
-        "cta_style": "link"
-      }
-    },
     "f9fc9028-5711-4e9c-bebe-e03a993d6d45": {
       "type": "rich-text",
       "settings": {
@@ -414,7 +391,6 @@
     "main-product-horizontal-gallery",
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
-    "eae45f94-d37a-4717-8fcf-50d814daf269",
     "f9fc9028-5711-4e9c-bebe-e03a993d6d45",
     "8e51457f-2e2c-46c6-bceb-19fe2802ad00",
     "0c2af7db-21f0-4ec7-905d-62281a4ccfe9",
