@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main-product-horizontal-gallery": {
@@ -18,16 +27,6 @@
           "settings": {
             "option_style": "text_underline",
             "hide_option_labels": false
-          }
-        },
-        "f8664129-2a1f-47be-8c14-4dc2bcf56201": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#e5dc89",
-            "star_size": 23,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
           }
         },
         "buy_buttons": {
@@ -75,7 +74,6 @@
         "title",
         "price",
         "variant_picker",
-        "f8664129-2a1f-47be-8c14-4dc2bcf56201",
         "buy_buttons",
         "share_buttons",
         "description",
@@ -85,35 +83,12 @@
       "settings": {
         "desktop_image_height": 50,
         "variant_image_behaviour": "swap",
-        "show_custom_icons": true,
-        "app_block_area": "product_form",
+        "show_custom_icons": false,
+        "app_block_area": "product_description",
         "enable_image_zoom": true,
         "enable_video_looping": true,
-        "color_scheme": "primary",
+        "color_scheme": "tertiary",
         "override_header_footer_color_scheme": false
-      }
-    },
-    "be69bfa5-727d-416a-ac4f-5dedddbe6a4d": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image": "{{ product.metafields.custom.product_banner_desktop_1800x800.value }}",
-        "image_mobile": "{{ product.metafields.custom.product_banner_mobile_800x1200.value }}",
-        "indent_image": false,
-        "height": "natural",
-        "max_height": "",
-        "image_focal_point": "object-center",
-        "title": "",
-        "heading_size": "text-2xl lg:text-5xl",
-        "text": "",
-        "content_position": "justify-center items-center text-center",
-        "content_width_desktop": "lg:w-2\/3",
-        "content_width_mobile": "w-full",
-        "content_padding_desktop": "",
-        "text_color": "primary",
-        "background_color": "primary",
-        "cta_link": "",
-        "cta_text": "",
-        "cta_style": "link"
       }
     },
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b": {
@@ -333,16 +308,6 @@
     },
     "166610583836c00d35": {
       "type": "apps",
-      "blocks": {
-        "62f12e4d-85ae-4407-a820-697a14192bc4": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "62f12e4d-85ae-4407-a820-697a14192bc4"
-      ],
       "settings": {
       }
     },
@@ -447,7 +412,6 @@
   },
   "order": [
     "main-product-horizontal-gallery",
-    "be69bfa5-727d-416a-ac4f-5dedddbe6a4d",
     "d7a7877d-fda3-4d9e-8a00-aebaa21b4c8b",
     "product-recommendations",
     "eae45f94-d37a-4717-8fcf-50d814daf269",
