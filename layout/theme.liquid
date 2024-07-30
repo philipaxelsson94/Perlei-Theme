@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="no-js supports-no-cookies" lang="{{ request.locale.iso_code }}">
-<head>{% render 'pagefly-head' %}
+<head>
   {% render 'elevar-head' %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -227,7 +227,7 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
   
-</head>
+{% include 'pagefly-app-header' %}</head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }} {% if settings.buttons_show_arrow %}show-button-arrows{% endif %}">
   {% render 'elevar-body-end' %}
