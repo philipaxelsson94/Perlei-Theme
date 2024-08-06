@@ -28,7 +28,7 @@
     "color_quaternary_meta": "#ffffff",
     "button_color": "transparent_background_text_border",
     "button_style": "square",
-    "base_font_size": 16,
+    "base_font_size": 14,
     "font_heading": "asap_n4",
     "heading_uppercase": true,
     "heading_underline": false,
