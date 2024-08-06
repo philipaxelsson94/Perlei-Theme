@@ -167,7 +167,7 @@
           "newsletter_subheading": "<p>Subscribe to our newsletter to receive special offers and first look at new products.<\/p>",
           "newsletter_color_scheme": "secondary",
           "show_grid_border": false,
-          "color_scheme": "tertiary"
+          "color_scheme": "primary"
         }
       },
       "popup": {
