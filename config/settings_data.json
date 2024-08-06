@@ -30,7 +30,7 @@
     "button_style": "square",
     "base_font_size": 14,
     "font_heading": "asap_n4",
-    "heading_uppercase": true,
+    "heading_uppercase": false,
     "heading_underline": false,
     "heading_letterspacing": 0,
     "base_heading_size": "text-base",
@@ -61,7 +61,7 @@
     "enable_breadcrumbs": false,
     "breadcrumb_separator": "emdash",
     "sharing_display": "icons",
-    "social_style": "icons",
+    "social_style": "text",
     "social_instagram_link": "https:\/\/www.instagram.com\/perleisweden",
     "social_facebook_link": "https:\/\/www.facebook.com\/perleisweden\/",
     "social_twitter_link": "",
@@ -154,6 +154,7 @@
           "7902405c-d6cf-4e4b-8309-cd98a1b5d0e3"
         ],
         "settings": {
+          "logo": "shopify:\/\/shop_images\/Namnlos_design_kopia.png",
           "logo_max_width": 150,
           "show_payment_icons": true,
           "show_locale_selector": true,
