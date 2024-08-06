@@ -99,8 +99,8 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": true,
-          "home_page_only": true,
+          "show_announcement_bar": false,
+          "home_page_only": false,
           "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
           "link": "",
