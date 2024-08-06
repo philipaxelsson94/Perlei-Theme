@@ -26,7 +26,7 @@
     "color_quaternary_background": "rgba(0,0,0,0)",
     "color_quaternary_accent": "#151616",
     "color_quaternary_meta": "#ffffff",
-    "button_color": "accent_background_text_border",
+    "button_color": "text_background",
     "button_style": "square",
     "base_font_size": 14,
     "font_heading": "cardo_n4",
@@ -99,7 +99,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": true,
+          "show_announcement_bar": false,
           "home_page_only": true,
           "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
@@ -114,12 +114,13 @@
       "header": {
         "type": "header",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/Namnlos_design_kopia.png",
           "logo_max_width": 80,
           "menu": "main-menu",
           "layout": "logo_left_menu_center",
           "dropdown_text_align": "center",
           "show_all_navigation_links": true,
-          "show_search": false,
+          "show_search": true,
           "sticky_header": true,
           "show_icons": true,
           "hide_account_button": false,

@@ -9,16 +9,6 @@
 */
 {
   "sections": {
-    "video_8F9B6f": {
-      "type": "video",
-      "settings": {
-        "title": "",
-        "cover_image": "shopify:\/\/shop_images\/PERLEI_header_d_2b9208ac-c2e8-4169-a071-622a472feed1.jpg",
-        "video_url": "",
-        "aspect_ratio": "16:9",
-        "color_scheme": "primary"
-      }
-    },
     "165907906074db0267": {
       "type": "apps",
       "settings": {
@@ -31,7 +21,6 @@
     }
   },
   "order": [
-    "video_8F9B6f",
     "165907906074db0267",
     "pagefly-home"
   ]
