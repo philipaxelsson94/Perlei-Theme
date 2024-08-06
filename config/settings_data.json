@@ -26,7 +26,7 @@
     "color_quaternary_background": "rgba(0,0,0,0)",
     "color_quaternary_accent": "#151616",
     "color_quaternary_meta": "#ffffff",
-    "button_color": "accent_background",
+    "button_color": "accent_background_text_border",
     "button_style": "square",
     "base_font_size": 14,
     "font_heading": "cardo_n4",
@@ -71,7 +71,7 @@
     "social_tumblr_link": "",
     "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCBh3cx7dgzmxnJUju7ffC7w",
     "social_vimeo_link": "",
-    "ajax_cart_method": "drawer",
+    "ajax_cart_method": "page",
     "cart_notes_enable": false,
     "cart_color_scheme": "primary",
     "favicon": "shopify:\/\/shop_images\/favicon_7c631062-97f5-48c6-8519-764ccb34a814.png",
@@ -99,15 +99,15 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": false,
-          "home_page_only": false,
-          "display": "marquee",
+          "show_announcement_bar": true,
+          "home_page_only": true,
+          "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
           "link": "",
-          "color_scheme": "secondary",
+          "color_scheme": "primary",
           "accent_as_bg_color": false,
           "speed": 80,
-          "direction": "",
+          "direction": "reverse",
           "repeat_text": false
         }
       },
