@@ -37,7 +37,7 @@
     "template_heading_size": "text-xl",
     "secondary_heading_size": "text-base",
     "font_body": "asap_n4",
-    "base_line_height": 1.2,
+    "base_line_height": 1.1,
     "body_copy_uppercase": true,
     "section_title_font": "heading",
     "section_title_align": "left",
@@ -99,7 +99,7 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "show_announcement_bar": false,
+          "show_announcement_bar": true,
           "home_page_only": true,
           "display": "static",
           "text": "Pay easy with Klarna \/ Fast Delivery",
